@@ -1,0 +1,23 @@
+#intro {
+	width: 940px;
+	height: 45px;
+	margin: 0px 0px 10px 10px;
+} 
+
+
+.divider-line {
+	width: 940px;
+	height: 20px;
+	margin: 0px 0px 0px 10px;
+	clear: both;
+	float: left;
+	background-image: url('./line-home-bottom.png');
+	background-repeat: no-repeat;	
+}
+
+
+.divider-line, .thumb a:link,
+.divider-line, .thumb a:visited,
+.divider-line, .thumb a:hover { 
+    border: 0px; 
+}
