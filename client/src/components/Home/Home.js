@@ -1,11 +1,14 @@
 
 import "./Home.css";
 
-import React from 'react'
+import React from "react";
+
+import Block from "../Block";
 
 const Home = () => (
-    <div id="header">            
+    <div>            
         <h1> Home </h1>
+        <Block/>
     </div>
 )
 
