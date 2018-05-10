@@ -65,3 +65,8 @@
 .bullet2 {
 	margin: 0px 18px 0px 15px;
 }
+
+.is-active {
+    font-weight: bold !important;
+    color: sandybrown !important;
+}

@@ -3,6 +3,8 @@ import "./Header.css";
 
 import React from 'react'
 
+import {NavLink} from "react-router-dom"
+
 const Header = () => (
     <div id="header">            
         <div id="title">
@@ -12,9 +14,9 @@ const Header = () => (
         </div> 
         <div id="main-nav">
             <p>
-                <a href="index.html">Home</a> <span class="bullet2">&bull;</span> 
-                <a href="about.html">About</a> <span class="bullet">&bull;</span> 
-                <a href="contact.html">Contact</a>
+                <NavLink exact to="/" activeClassName="is-active">Home</NavLink><span class="bullet2"></span>  
+                <NavLink to="/about" activeClassName="is-active">About</NavLink><span class="bullet"></span> 
+                <NavLink to="/contact" activeClassName="is-active">Contact</NavLink>
             </p>
         </div>       
         <div id="top-line"></div>
