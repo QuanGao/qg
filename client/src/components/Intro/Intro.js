@@ -6,7 +6,7 @@ import React from 'react'
 const Intro = () => (
     <div>
         <div id="intro">		
-            <p>Welcome to my site!</p>				
+            <p>Hello there! I'm Quan, a full stack web developer and avid learner. I am pretty comfortable throughout the MERN stack. Outside of MERN, I have also built projects with mySQL and firebase.</p>				
         </div>	
         <div class="divider-line"></div>
     </div>

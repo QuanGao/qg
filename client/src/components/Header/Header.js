@@ -7,7 +7,7 @@ const Header = () => (
     <div id="header">            
         <div id="title">
             <p>
-                <a href="index.html"><strong>Quan Gao</strong> Coding, Learning &amp; Sciencing </a>
+                <a href="index.html"><strong>Quan Gao</strong> &nbsp; Coding, Learning &amp; Sciencing </a>
             </p>
         </div> 
         <div id="main-nav">
