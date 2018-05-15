@@ -26,12 +26,12 @@ class SiderDemo extends React.Component {
           </div>
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
-              <Icon type="pie-chart" />
+              <Icon type="smile-o" />
               <span>Who?</span>
             </Menu.Item>
             <Menu.Item key="2">
-              <Icon type="desktop" />
-              <span>Option 2</span>
+              <Icon type="code-o" />
+              <span>Skills</span>
             </Menu.Item>
             <SubMenu
               key="sub1"
@@ -49,6 +49,10 @@ class SiderDemo extends React.Component {
               <Menu.Item key="8">Team 2</Menu.Item>
             </SubMenu>
             <Menu.Item key="9">
+              <Icon type="profile" />
+              <span>Resume</span>
+            </Menu.Item>
+            <Menu.Item key="10">
               <Icon type="mail" />
               <span>Contact</span>
             </Menu.Item>
