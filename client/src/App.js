@@ -1,27 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom"
-import Header from "./components/Header";
-import Intro from "./components/Intro";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
-
-
+import Sider from "./components/Sider";
+import ContentWrapper from "./components/ContentWrapper"
+import { Layout} from 'antd';
 class App extends Component {
   render() {
     return (
     <Router>
         <div className="App">
-            <Header/>
-            {/* <Intro/> */}
-                {/* <Route exact path="/" component={Home}/>
+        <Layout style={{ minHeight: '100vh' }}>
+            <Sider/>
+            <ContentWrapper/>
+        </Layout>
+            {/* <Route exact path="/" component={Home}/>
                 <Route exact path="/about" component={About}/>
                 <Route exact path="/contact" component={Contact}/> */}
-            {/* <Footer/> */}
-        </div>
+        </div>        
     </Router>
     );
   }
