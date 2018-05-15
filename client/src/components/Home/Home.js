@@ -8,7 +8,6 @@ import Block from "../Block";
 const Home = () => (
     <div>            
         <h1> Home </h1>
-        <Block/>
     </div>
 )
 

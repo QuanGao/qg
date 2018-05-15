@@ -1,25 +1,16 @@
 
-import "./Header.css";
+import "./Project.css";
 
 import React from 'react'
 
-const Header = () => (
-    <div id="header">            
-        <div id="title">
-            <p>
-                <a href="index.html"><strong>Quan Gao</strong> Graphic Design, Typography &amp; Lettering</a>
-            </p>
-        </div> 
-        <div id="main-nav">
-            <p>
-                <a href="index.html">Home</a> <span class="bullet2">&bull;</span> 
-                <a href="about.html">About</a> <span class="bullet">&bull;</span> 
-                <a href="contact.html">Contact</a>
-            </p>
-        </div>       
-        <div id="top-line"></div>
+import image from "../../getAway/activity-img.jpg"
+
+const Project = () => (
+    <div className="project">            
+       <h3>GetAway Travel App</h3>
+       <img src={image}/>
     </div>
 )
 
-export default Header
+export default Project
 
