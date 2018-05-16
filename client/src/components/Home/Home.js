@@ -1,14 +1,14 @@
 import React from 'react'
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Layout} from 'antd';
 import "./Home.css";
 
-const { Header, Content, Footer} = Layout;
+const {Content, Footer} = Layout;
 class Home extends React.Component {
     render() {
         return (
             <Layout className="home">
                 <Content style={{ margin: '0 16px' }}>
-                    <div className="bio" style={{left: this.props.collapsed?"340px":"300px", width:this.props.collapsed?"450px":"400px"}} >
+                    <div className="bio" style={{left: this.props.collapsed?"360px":"300px"}} >
                         <h1> About me </h1>
                         <p>Hello there! I'm Quan, a full stack web developer and avid learner. 
                         I am pretty comfortable throughout the <strong> MERN </strong>stack. Outside of MERN, 
