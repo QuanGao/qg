@@ -1,0 +1,26 @@
+.ant-layout-footer {
+    font-size: 14px;
+    background-color: transparent;
+    position: relative;
+    top:8px;
+}
+
+.home {
+    background-image: url("./images/rawpixel-256642-unsplash.jpg");
+    background-size: cover;
+}
+
+.bio {
+    /* width: 400px; */
+    padding: 10px;
+    position: relative;
+    top: 100px;
+}
+.bio h1 {
+    font-family: 'Dancing Script', cursive;
+}
+.bio p {
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700
+}
