@@ -1,10 +1,10 @@
 import React from 'react'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-import "./ContentWrapper.css";
+import "./Skills.css";
 
 
 const { Header, Content, Footer} = Layout;
-class ContentWrapper extends React.Component {
+class Skills extends React.Component {
     state = {
       collapsed: false,
     };
@@ -19,7 +19,7 @@ class ContentWrapper extends React.Component {
                     <Breadcrumb.Item>Bill</Breadcrumb.Item>
                     </Breadcrumb>
                     <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-                    Bill is a cat.
+                    Skills
                     </div> 
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
@@ -30,7 +30,7 @@ class ContentWrapper extends React.Component {
     }
 }
 
-export default ContentWrapper;
+export default Skills;
 
                         {/* <Menu.Item key="11">
                             <a href="https://github.com/QuanGao">

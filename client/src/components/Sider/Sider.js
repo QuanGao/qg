@@ -3,6 +3,10 @@ import { Layout, Menu, Icon, Row, Col } from 'antd';
 import "./Sider.css";
 import ContentWrapper from "../ContentWrapper";
 import Home from "../Home"
+import Skills from "../Skills"
+import Contact from "../Contact"
+import Project from "../Project"
+
 
 const {Sider } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -36,29 +40,27 @@ class SiderDemo extends React.Component {
                             <span>Skills</span>
                         </Menu.Item>
                         <SubMenu key="sub1" title={<span><Icon type="user" /><span>Solo Work</span></span>}>              
-                            <Menu.Item key="3">Project1</Menu.Item>
-                            <Menu.Item key="4">Project2</Menu.Item>
-                            <Menu.Item key="5">Project3</Menu.Item>
+                            <Menu.Item key="4">Project1</Menu.Item>
+                            <Menu.Item key="5">Project2</Menu.Item>
+                            <Menu.Item key="6">Project3</Menu.Item>
                         </SubMenu>
                         <SubMenu key="sub2" title={<span><Icon type="team" /><span>Team Projects</span></span>}>                         
-                            <Menu.Item key="6">RoomieU</Menu.Item>
-                            <Menu.Item key="7">GetAway</Menu.Item>
-                            <Menu.Item key="8">DinnerSavior</Menu.Item>
+                            <Menu.Item key="7">RoomieU</Menu.Item>
+                            <Menu.Item key="8">GetAway</Menu.Item>
+                            <Menu.Item key="9">DinnerSavior</Menu.Item>
                         </SubMenu>
-                        <Menu.Item key="9">
-                            <Icon type="profile" />
-                            <span>Resume</span>
-                        </Menu.Item>
-                        <Menu.Item key="10">
+                        <Menu.Item key="3">
                             <Icon type="mail" />
                             <span>Contact</span>
                         </Menu.Item>
                     </Menu>
                 </Sider>
-                {this.state.activeKey==="1" ? <Home collapsed={this.state.collapsed}/>: <ContentWrapper/>}
+                {this.state.activeKey==="1" ? <Home collapsed={this.state.collapsed}/>: 
+                    (this.state.activeKey==="2" ? <Skills/>:
+                    (this.state.activeKey==="3" ?<Contact/>:<Project/> ))}
             </Layout>
         );
     }
 }
-
+{/* (|| this.state.activeKey==="3" ?<ContentWrapper/>:) */}
 export default SiderDemo;

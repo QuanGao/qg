@@ -1,0 +1,7 @@
+/* .contact {
+    background-image: url("./images/joanna-kosinska-254405-unsplash.jpg");
+    background-size: cover;
+} */
+.contact.ant-row {
+    margin-top: 100px
+} 

@@ -1,8 +1,9 @@
 import React from 'react'
 import { Layout, Col, Row } from 'antd';
 import "./Home.css";
+import MyFooter from "../MyFooter"
 
-const {Content, Footer} = Layout;
+const {Content} = Layout;
 class Home extends React.Component {
     render() {
         return (
@@ -29,9 +30,7 @@ class Home extends React.Component {
                     <Col span={6}/>
                     </Row>
                 </Content>
-                <Footer style={{ textAlign: 'center'}}>
-                    Quan Gao ©2018 Web development Portfolio
-                </Footer>
+                <MyFooter />
             </Layout>
         )
     }
