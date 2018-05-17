@@ -31,3 +31,16 @@ class ContentWrapper extends React.Component {
 }
 
 export default ContentWrapper;
+
+                        {/* <Menu.Item key="11">
+                            <a href="https://github.com/QuanGao">
+                                <Icon type="github" />
+                                <span>Github</span>
+                            </a>
+                        </Menu.Item>
+                        <Menu.Item key="12">
+                            <a href="https://www.linkedin.com/in/quan-gao-code">
+                                <Icon type="linkedin" />
+                                <span>Linkedin</span>
+                            </a>
+                        </Menu.Item> */}

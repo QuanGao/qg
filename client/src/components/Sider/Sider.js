@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu, Icon, Row, Col } from 'antd';
 import "./Sider.css";
 import ContentWrapper from "../ContentWrapper";
 import Home from "../Home"
@@ -55,7 +55,6 @@ class SiderDemo extends React.Component {
                         </Menu.Item>
                     </Menu>
                 </Sider>
-                {/* <ContentWrapper/> */}
                 {this.state.activeKey==="1" ? <Home collapsed={this.state.collapsed}/>: <ContentWrapper/>}
             </Layout>
         );

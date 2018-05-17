@@ -10,16 +10,17 @@
     background-size: cover;
 }
 
-.bio {
+.ant-layout-content{
     position: relative;
-    /* padding: 10px;  
-    top: 100px; */
+}
+.bio {
+    /* position: relative; */
+    position:fixed;
     padding: 20px;  
     top: 60px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.35);
     width: 400px;
-    /* box-shadow: 10px 10px 5px grey; */
-    
+    margin: auto;
 }
 .bio h1 {
     font-family: 'Dancing Script', cursive;
@@ -28,4 +29,11 @@
     font-size: 17px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
+}
+
+@media all and (max-width: 1080px) {
+    .bio {
+        background-color: rgba(255,255,255, 0.8);
+        box-shadow: 10px 10px 5px grey;
+    }
 }
