@@ -1,7 +1,6 @@
 import React from 'react'
 import { Layout, Menu, Icon, Row, Col } from 'antd';
 import "./Sider.css";
-import ContentWrapper from "../ContentWrapper";
 import Home from "../Home"
 import Skills from "../Skills"
 import Contact from "../Contact"
