@@ -61,5 +61,4 @@ class SiderDemo extends React.Component {
         );
     }
 }
-{/* (|| this.state.activeKey==="3" ?<ContentWrapper/>:) */}
 export default SiderDemo;

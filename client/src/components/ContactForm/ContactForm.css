@@ -1,0 +1,10 @@
+/* .contact-form {
+    position: relative;
+    right: 200px;
+} */
+
+@media all and (max-width: 968) {
+    /* .contact-form {
+        right: 0px;
+    } */
+}

@@ -12,3 +12,7 @@
 .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
     background-color: #2193d7;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+}

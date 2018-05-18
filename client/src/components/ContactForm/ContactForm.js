@@ -1,7 +1,9 @@
 import React from 'react'
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import "./ContactForm.css"
 const FormItem = Form.Item;
 const Option = Select.Option;
+const { TextArea } = Input;
 
 class RegistrationForm extends React.Component {
   state = {
@@ -43,46 +45,45 @@ class RegistrationForm extends React.Component {
         sm: {
           span: 16,
           offset: 8,
-        },
+        }, 
       },
     };
 
     return (
-      <Form onSubmit={this.handleSubmit}>
-        <FormItem
-          {...formItemLayout}
-          label={(
-            <span>
-              Name&nbsp;
-            </span>
-          )}
-        >
-        <Input />
+      <Form onSubmit={this.handleSubmit} className="contact-form">
+      
+        <FormItem {...formItemLayout} label={(<span>Name&nbsp; </span>)}>             
+            {getFieldDecorator('name', {
+                rules: [{
+                required: true, message: 'Please enter your name!',
+                }],
+            })(
+                <Input />
+            )}
         </FormItem>
-        <FormItem
-          {...formItemLayout}
-          label="E-mail"
-        >
-          {getFieldDecorator('email', {
-            rules: [{
-              type: 'email', message: 'The input is not valid E-mail!',
-            }, {
-              required: true, message: 'Please input your E-mail!',
-            }],
-          })(
+        <FormItem {...formItemLayout} label="E-mail">
+            {getFieldDecorator('email', {
+                rules: [{
+                type: 'email', message: 'The input is not valid E-mail!',
+                }, {
+                required: true, message: 'Please input your E-mail!',
+                }],
+            })(
             <Input />
           )}
         </FormItem>
         
-        <FormItem
-          {...formItemLayout}
-          label={(
-            <span>
-            Message&nbsp;
-            </span>
-          )}
-        >
-        <Input />
+        <FormItem {...formItemLayout} label={(<span>Message&nbsp;</span>)}>               
+            {getFieldDecorator('message', {
+                    rules: [{
+                    required: true, message: 'Talk coding to me :P',
+                    }],
+                })(
+                    <TextArea rows={6} />
+                )}
+            </FormItem>
+        <FormItem {...tailFormItemLayout}>
+            <Button type="primary" htmlType="submit">Send</Button>
         </FormItem>
       </Form>
     );

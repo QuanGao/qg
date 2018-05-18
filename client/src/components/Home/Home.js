@@ -8,8 +8,7 @@ class Home extends React.Component {
     render() {
         return (
             <Layout className="home">
-                <Content style={{ margin: '0 16px' }}>
-                    
+                <Content style={{ margin: '0 16px' }}>                   
                     <Row className="bio-row">
                     <Col span={24} >
                     <div className="bio" >
@@ -26,7 +25,6 @@ class Home extends React.Component {
                         </p>
                     </div>
                     </Col>
-                    {/* <Col span={6}/> */}
                     </Row>
                 </Content>
                 <MyFooter />

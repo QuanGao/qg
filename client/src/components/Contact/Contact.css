@@ -1,7 +1,12 @@
 /* .contact {
-    background-image: url("./images/joanna-kosinska-254405-unsplash.jpg");
+    background-image: url("./images/darren-nunis-422165-unsplash.jpg");
     background-size: cover;
 } */
-.contact.ant-row {
-    margin-top: 100px
-} 
+
+.contact {
+    margin-top: 80px;
+}
+
+@media all and (min-width: 560px) {
+    
+}
