@@ -9,10 +9,9 @@ class Home extends React.Component {
         return (
             <Layout className="home">
                 <Content style={{ margin: '0 16px' }}>
-                    <Row  className="bio-row">
-                    <Col span={8}/>
-                    <Col span={10} >
-                    {/* <div className="bio" style={{left: this.props.collapsed?"360px":"300px"}} > */}
+                    
+                    <Row className="bio-row">
+                    <Col span={24} >
                     <div className="bio" >
                         <h1> About me </h1>
                         <p>Hello there! I'm Quan, a full stack web developer and avid learner. 
@@ -27,7 +26,7 @@ class Home extends React.Component {
                         </p>
                     </div>
                     </Col>
-                    <Col span={6}/>
+                    {/* <Col span={6}/> */}
                     </Row>
                 </Content>
                 <MyFooter />

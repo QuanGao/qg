@@ -14,13 +14,11 @@
     position: relative;
 }
 .bio {
-    /* position: relative; */
-    position:fixed;
     padding: 20px;  
-    top: 60px;
     background-color: rgba(255, 255, 255, 0.35);
     width: 400px;
-    margin: auto;
+    margin-top: 80px;
+    margin-left: 300px;
 }
 .bio h1 {
     font-family: 'Dancing Script', cursive;
@@ -31,9 +29,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-@media all and (max-width: 1080px) {
+@media all and (min-width: 1200px) {
     .bio {
-        background-color: rgba(255,255,255, 0.8);
-        box-shadow: 10px 10px 5px grey;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
