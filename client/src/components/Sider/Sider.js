@@ -72,7 +72,8 @@ class SiderDemo extends React.Component {
                 </Sider>
                 {this.state.activeKey==="1" ? <Home collapsed={this.state.collapsed}/>: 
                     (this.state.activeKey==="2" ? <Skills/>:
-                    (this.state.activeKey==="3" ?<Contact/>:<Project/> ))}
+                    (this.state.activeKey==="3" ?<Contact/>:
+                    (this.state.activeKey!=="10" && this.state.activeKey!=="11"?<Project/>:"")))}
             </Layout>
         );
     }

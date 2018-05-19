@@ -59,13 +59,10 @@ class RegistrationForm extends React.Component {
         <FormItem>
             <h1>Contact Me</h1>
             <p>
-            {/* If you have a question, work enquiry or anything else, 
-            please don't hesitate to write to me at quangaowork@gmail.com or use the form below. */}
-            <Tooltip placement="topLeft" title={text}>
-                 <Icon type="mail" style={{ fontSize: 16}}/>
-            </Tooltip>
-            {/* <Divider type="vertical" /> */}
-            <span> / leave a message here</span>
+                <Tooltip placement="topLeft" title={text}>
+                    <Icon type="mail" style={{ fontSize: 16}}/>
+                </Tooltip>
+                <span> / leave a message here</span>
             </p> 
 
         </FormItem>
