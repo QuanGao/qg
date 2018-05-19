@@ -2,9 +2,31 @@
     position: relative;
     right: 200px;
 } */
+/* .ant-divider {
+    background-color:rgb(255, 145, 0);
+} */
+.ant-form-item{
+    font-family: 'Roboto', sans-serif;
+}
+.contact h1 {
+    font-weight: bolder;
+    /* margin-left: 40px; */
+    text-align: center;
+}
+.contact p {
+    /* margin-left: 40px; */
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 0px
 
-@media all and (max-width: 968) {
-    /* .contact-form {
-        right: 0px;
+}
+@media all and (min-width: 968) {
+    /* .contact h1 {
+        padding-left: 40px;
     } */
+
+    /* .contact p {
+        padding-left: 40px;
+    } */
+   
 }

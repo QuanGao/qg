@@ -1,9 +1,10 @@
 import React from 'react'
-import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import { Divider,Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
 import "./ContactForm.css"
 const FormItem = Form.Item;
 const Option = Select.Option;
 const { TextArea } = Input;
+const text = <span>quangaowork@gmail.com</span>;
 
 class RegistrationForm extends React.Component {
   state = {
@@ -29,11 +30,13 @@ class RegistrationForm extends React.Component {
     const formItemLayout = {
       labelCol: {
         xs: { span: 24 },
-        sm: { span: 8 },
+        // sm: { span: 8 },
+        sm: { span: 4 },
       },
       wrapperCol: {
         xs: { span: 24 },
-        sm: { span: 16 },
+        // sm: { span: 16 },
+        sm: { span: 20 },
       },
     };
     const tailFormItemLayout = {
@@ -43,16 +46,32 @@ class RegistrationForm extends React.Component {
           offset: 0,
         },
         sm: {
-          span: 16,
-          offset: 8,
+        //   span: 16,
+        //   offset: 8,
+        span: 20,
+        offset: 4,
         }, 
       },
     };
 
     return (
-      <Form onSubmit={this.handleSubmit} className="contact-form">
-      
-        <FormItem {...formItemLayout} label={(<span>Name&nbsp; </span>)}>             
+    <Form onSubmit={this.handleSubmit} className="contact-form">
+        <FormItem>
+            <h1>Contact Me</h1>
+            <p>
+            {/* If you have a question, work enquiry or anything else, 
+            please don't hesitate to write to me at quangaowork@gmail.com or use the form below. */}
+            <Tooltip placement="topLeft" title={text}>
+                 <Icon type="mail" style={{ fontSize: 16}}/>
+            </Tooltip>
+            {/* <Divider type="vertical" /> */}
+            <span> / leave a message here</span>
+            </p> 
+
+        </FormItem>
+
+
+        <FormItem {...formItemLayout} label="Name">             
             {getFieldDecorator('name', {
                 rules: [{
                 required: true, message: 'Please enter your name!',
@@ -73,7 +92,7 @@ class RegistrationForm extends React.Component {
           )}
         </FormItem>
         
-        <FormItem {...formItemLayout} label={(<span>Message&nbsp;</span>)}>               
+        <FormItem {...formItemLayout} label="Message">               
             {getFieldDecorator('message', {
                     rules: [{
                     required: true, message: 'Talk coding to me :P',

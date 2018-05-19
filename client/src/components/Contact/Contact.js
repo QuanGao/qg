@@ -15,24 +15,27 @@ class Contact extends React.Component {
     render() {
        
         return (
-            <Layout className="content-wrapper">
+            <Layout className="contact-wrapper">
                 {/* <Header style={{ background: '#fff', padding: 0 }} ></Header> */}
 
                 <Content style={{ margin: '0 16px' }}>
                 
-                <div className="contact">
+              
                     {/* <Row> */}
                         {/* <Col span={18}> */}
-                        <div style={{width:450, margin:"auto"}}>
-                            <h1>Contact</h1>
+                        <div style={{maxWidth:700, padding:"20px 20px 20px 20px"}} className="contact">
+                            {/* <h1>Contact</h1>
                             <h4>
-                            Write to me at quangaowork@gmail.com or use the form below.
-                            </h4>
-                        </div>
+                            Feel free to write to me at quangaowork@gmail.com or use the form below.
+                            </h4> */}
+                            <ContactForm/>
+                            
+           
+                        
                         {/* </Col> */}
                         {/* <Col span={3}/> */}
                     {/* </Row> */}
-                    <ContactForm/>
+                    {/* <ContactForm/> */}
                 </div> 
 
 
