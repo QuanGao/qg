@@ -10,7 +10,7 @@ class Contact extends React.Component {
         return (
             <Layout className="contact-wrapper">
                 <Content style={{ margin: '0 16px' }}>      
-                    <div style={{maxWidth:700, padding:"20px 20px 20px 20px"}} className="contact">
+                    <div style={{maxWidth:700, padding:"30px 30px 20px 20px"}} className="contact">
                         <ContactForm/>
                     </div> 
                 </Content> 
