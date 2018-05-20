@@ -1,6 +1,8 @@
 import React from 'react'
 import { Divider,Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
 import "./ContactForm.css"
+import API from "../../utils/API"
+
 const FormItem = Form.Item;
 const Option = Select.Option;
 const { TextArea } = Input;
@@ -14,9 +16,14 @@ class RegistrationForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }
+        if (!err) {
+            console.log('Received values of form: ', values);
+            // {name: "Quan", email: "1@gmail.com", message: "hi"}
+            API.submitMessage(values).then(response=>{
+                console.log("response", response)
+            })
+        } 
+
     });
   }
   handleConfirmBlur = (e) => {

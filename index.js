@@ -1,8 +1,15 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/qg_db"
+const bodyParser = require('body-parser');
+const routes = require("./routes");
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(routes); 
 
 mongoose.Promise = global.Promise;
 mongoose
