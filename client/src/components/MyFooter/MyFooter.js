@@ -4,8 +4,8 @@ import "./MyFooter.css";
 
 const { Footer} = Layout;
 
-const MyFooter = () => (
-    <Footer style={{ textAlign: 'center' }}>
+const MyFooter = (props) => (
+    <Footer style={{ textAlign: 'center', backgroundColor: props.backgroundColor }}>
         Quan Gao ©2018 Web development Portfolio    
     </Footer> 
 )

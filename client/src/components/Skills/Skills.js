@@ -1,7 +1,7 @@
 import React from 'react'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import "./Skills.css";
-
+import MyFooter from "../MyFooter"
 import data from "./data.json";
 import {Treemap} from "recharts"
 
@@ -61,18 +61,21 @@ class CustomizedContent extends React.Component{
 class SimpleTreemap extends React.Component{
 	render () {
   	return (
-    	<Treemap
-      	// width={400}
-        // height={200}
-        width={800}
-        height={400}
-        data={data}
-        dataKey="size"
-        ratio={4/3}
-        stroke="#fff"
-        fill="#8884d8"
-        content={<CustomizedContent colors={COLORS}/>}
-      />
+        <div>
+            <Treemap
+            // width={400}
+            // height={200}
+            width={800}
+            height={400}
+            data={data}
+            dataKey="size"
+            ratio={4/3}
+            stroke="#fff"
+            fill="#8884d8"
+            content={<CustomizedContent colors={COLORS}/>}
+        />
+      {/* <MyFooter backgroundColor=""/> */}
+      </div>
     );
   }
 };

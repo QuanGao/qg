@@ -27,7 +27,7 @@ class Home extends React.Component {
                     </Col>
                     </Row>
                 </Content>
-                <MyFooter />
+                <MyFooter backgroundColor="#cfdce7"/>
             </Layout>
         )
     }

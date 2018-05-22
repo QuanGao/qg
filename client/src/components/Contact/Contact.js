@@ -14,7 +14,7 @@ class Contact extends React.Component {
                         <ContactForm/>
                     </div> 
                 </Content> 
-                <MyFooter/>
+                <MyFooter backgroundColor="#ffb306"/>
             </Layout>
         )
     }

@@ -1,10 +1,5 @@
-/* .ant-layout-footer {
-    font-size: 12px;
-} */
 
 .ant-layout-footer {
-    /* font-size: 14px;
-    background-color: transparent; */
     position: relative;
     top:70px;
 }
