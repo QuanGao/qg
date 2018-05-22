@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Layout, Menu, Breadcrumb, Icon, Col, Row } from 'antd';
 import "./Skills.css";
 import MyFooter from "../MyFooter"
 import data from "./data.json";
@@ -61,21 +61,58 @@ class CustomizedContent extends React.Component{
 class SimpleTreemap extends React.Component{
 	render () {
   	return (
-        <div>
-            <Treemap
-            // width={400}
-            // height={200}
-            width={800}
-            height={400}
-            data={data}
-            dataKey="size"
-            ratio={4/3}
-            stroke="#fff"
-            fill="#8884d8"
-            content={<CustomizedContent colors={COLORS}/>}
-        />
-      {/* <MyFooter backgroundColor=""/> */}
-      </div>
+        <Layout className="content-wrapper">
+            {/* <Header style={{ background: '#fff', padding: 0 }} /> */}
+            {/* <Content style={{ margin: '0 16px' , background: '#fff'}}> */}
+            <Header style={{ background: '#fff', padding: 0 }}> 
+                <h1> M Y  S K I L L S</h1>
+            </Header>
+            <Content>
+                {/* <div style={{ padding: 24, background: '#fff', minHeight: 360 }}> */}
+                <div>
+                    <Treemap
+                        // width={400}
+                        // height={200}
+                        width={950}
+                        height={475}
+                        data={data}
+                        dataKey="size"
+                        ratio={4/3}
+                        stroke="#fff"
+                        fill="#8884d8"
+                        content={<CustomizedContent colors={COLORS}/>}
+                    />
+
+
+
+                </div> 
+            </Content>
+            <Footer style={{ textAlign: 'center' }}>
+                Quan Gao ©2018 Web development Portfolio
+            </Footer> 
+        </Layout>
+        // <div className="skills-container">
+        //     <Row>
+        //         <h1>S K I L L S</h1>
+        //     </Row>
+        //     <Row>
+        //         <Col span={24}>
+        //             <Treemap
+        //             // width={400}
+        //             // height={200}
+        //             width={800}
+        //             height={400}
+        //             data={data}
+        //             dataKey="size"
+        //             ratio={4/3}
+        //             stroke="#fff"
+        //             fill="#8884d8"
+        //             content={<CustomizedContent colors={COLORS}/>}
+        //             />
+        //         </Col>
+        //     </Row>
+    
+    //   </div>
     );
   }
 };

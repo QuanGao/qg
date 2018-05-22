@@ -49,19 +49,16 @@ class SiderDemo extends React.Component {
                             <Menu.Item key="9">DinnerSavior</Menu.Item>
                         </SubMenu>
                         <Menu.Item key="3">
-                            {/* <Icon type="mail" /> */}
                             <Icon type="form" />
                             <span>Contact</span>
                         </Menu.Item>
                         <Menu.Item key="10">
-                            {/* <Icon type="mail" /> */}
                             <a href="https://github.com/QuanGao">
                                 <Icon type="github" />
                                 <span>Github</span>
                             </a>
                         </Menu.Item>
                         <Menu.Item key="11">
-                            {/* <Icon type="mail" /> */}
                             <a href="https://www.linkedin.com/in/quan-gao-code">
                                 <Icon type="linkedin" />
                                 <span>Linkedin</span>
