@@ -20,7 +20,7 @@ class Home extends React.Component {
                         <p>
                             Writing clean code and designing optimal solutions to challenging 
                             problems give me great satisfaction. For me, spending time solving algorithm 
-                            puzzles is a total treat. I am very excited to embark on a new journey into software/web development. 
+                            puzzles is a total treat. I am thrilled to embark on an exciting new journey into software/web development. 
                             In my other life, I hold a PhD degree in biology from the University of Chicago and do research for a living.
                         </p>
                     </div>

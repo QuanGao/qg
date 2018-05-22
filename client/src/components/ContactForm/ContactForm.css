@@ -11,6 +11,10 @@
     margin-bottom: 0px
 
 }
+.erroMsg {
+    color: orangered;
+    margin-left: 15px
+}
 @media all and (min-width: 968) {
    
 }

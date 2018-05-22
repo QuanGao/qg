@@ -13,9 +13,8 @@ router.post('/submit', (req, res) => {
       'text': req.body.message,
       'from': req.body.name,
       'to': "quangaowork@gmail.com",
-      "subject": "from portofolio site",
+      "subject": "From Quan site",
       'reply-to': req.body.email,
-    //   'subject': 'Tell us about your project: ' + req.body.company
     }, (error) => {
         console.log("error",error)
       if (error) {

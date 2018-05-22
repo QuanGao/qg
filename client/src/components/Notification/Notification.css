@@ -1,0 +1,42 @@
+.notification{
+    height: 300px;
+}
+
+.notification h1 {
+    font-family: 'Caveat', cursive;
+    margin-top: 20px;
+    color:#005b87
+}
+
+.notification img{
+    display: block;
+    max-width: 250px;
+    margin: auto; 
+}
+.anticon-message {
+    color: palevioletred
+}
+
+@media all and (max-width:568px){
+    .notification h1 {
+        font-size: 1.5em
+    }
+
+    .notification img{
+        max-width: 200px;
+    }
+
+    .contact-form h1 {
+        font-size: 1.5em
+    }
+}
+
+@media all and (max-width:480px){
+    .notification img{
+        max-width: 140px;
+    }
+    .contact {
+        padding-left:0px;
+    }
+
+}
