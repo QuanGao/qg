@@ -1,6 +1,6 @@
 import React from 'react'
 // import { Layout, Menu, Breadcrumb, Icon, Col, Row } from 'antd';
-import { Layout} from 'antd';
+import { Layout, Icon} from 'antd';
 import "./Skills.css";
 import MyFooter from "../MyFooter"
 import data from "./data.json";
@@ -67,7 +67,7 @@ class SimpleTreemap extends React.Component{
             {/* <Header style={{ background: '#fff', padding: 0 }} /> */}
             {/* <Content style={{ margin: '0 16px' , background: '#fff'}}> */}
             <Header style={{ background: '#fff', padding: 0 }}> 
-                <h1> MY TOOLBOX</h1>
+                <h1> MY TOOLBOX <Icon type="gift" /></h1>
             </Header>
             <Content>
                 {/* <div style={{ padding: 24, background: '#fff', minHeight: 360 }}> */}
