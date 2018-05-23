@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Menu, Icon, Row, Col } from 'antd';
+import { Layout, Menu, Icon} from 'antd';
 import "./Sider.css";
 import Home from "../Home"
 import Skills from "../Skills"

@@ -2,19 +2,33 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-.skills-container h1 {
-    margin: auto;
-    width: 200px;
-    margin-top: 50px;
-}
-
-/* .recharts-surface {
-    margin: 50px;
-} */
-
-.skills-container {
-    width: 900px;
     margin:auto;
 }
+
+.ant-layout-header h1 {
+    text-align: center;
+    letter-spacing: 3px;
+
+}
+
+.ant-layout-header hr {
+   width: 800px;
+   margin:auto;
+}
+
+.ant-layout {
+    background-color: #fff;
+}
+
+.ant-layout-header {
+    margin:30px;
+    /* color: #8889DD; */
+    /* color:#9597E4;
+    color:#8DC77B;
+    color:#A5D297;
+    color:#A5D297;
+    color:#E2CF45;
+    color:#F8C12D; */
+}
+
+/* const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D']; */

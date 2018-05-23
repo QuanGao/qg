@@ -1,13 +1,15 @@
 import React from 'react'
-import { Layout, Menu, Breadcrumb, Icon, Col, Row } from 'antd';
+// import { Layout, Menu, Breadcrumb, Icon, Col, Row } from 'antd';
+import { Layout} from 'antd';
 import "./Skills.css";
-import MyFooter from "../MyFooter"
+// import MyFooter from "../MyFooter"
 import data from "./data.json";
 import {Treemap} from "recharts"
 
 const { Header, Content, Footer} = Layout;
-
-const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D'];
+//#E2CF45'#64c195
+// const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D'];
+const COLORS = ['#f38c74','#F8C12D', '#64c195', '#8889DD'];
 
 class CustomizedContent extends React.Component{
   render() {
@@ -21,14 +23,14 @@ class CustomizedContent extends React.Component{
           width={width}
           height={height}
           style={{
-            fill: depth < 2 ? colors[Math.floor(index / root.children.length * 6)] : 'none',
+            fill: depth <2 ? colors[Math.floor(index / root.children.length * 4)] : 'none',
             stroke: '#fff',
             strokeWidth: 2 / (depth + 1e-10),
             strokeOpacity: 1 / (depth + 1e-10),
           }}
         />
         {
-          depth === 1 ?
+          depth > 1 ?
           <text
             x={x + width / 2}
             y={y + height / 2 + 7}
@@ -49,7 +51,7 @@ class CustomizedContent extends React.Component{
             fontSize={16}
             fillOpacity={0.9}
           >
-            {index + 1}
+            {index + 1}{`: `+name}
           </text>
           : null
         }
@@ -65,7 +67,7 @@ class SimpleTreemap extends React.Component{
             {/* <Header style={{ background: '#fff', padding: 0 }} /> */}
             {/* <Content style={{ margin: '0 16px' , background: '#fff'}}> */}
             <Header style={{ background: '#fff', padding: 0 }}> 
-                <h1> M Y  S K I L L S</h1>
+                <h1> MY TOOLBOX</h1><hr/>
             </Header>
             <Content>
                 {/* <div style={{ padding: 24, background: '#fff', minHeight: 360 }}> */}
@@ -73,18 +75,15 @@ class SimpleTreemap extends React.Component{
                     <Treemap
                         // width={400}
                         // height={200}
-                        width={950}
-                        height={475}
+                        width={800}
+                        height={400}
                         data={data}
                         dataKey="size"
                         ratio={4/3}
                         stroke="#fff"
-                        fill="#8884d8"
+                        fill="#D3D3D3"
                         content={<CustomizedContent colors={COLORS}/>}
                     />
-
-
-
                 </div> 
             </Content>
             <Footer style={{ textAlign: 'center' }}>

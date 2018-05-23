@@ -1,5 +1,4 @@
 import React from 'react'
-import { Card } from 'antd';
 import "./Notification.css";
 import {Col, Row, Icon} from "antd"
 

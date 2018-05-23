@@ -1,12 +1,11 @@
 import React from 'react'
-import { Divider,Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button } from 'antd';
+import { Form, Input, Tooltip, Icon, Button } from 'antd';
 import "./ContactForm.css"
 import API from "../../utils/API"
 import Notification from "../Notification";
 import successGif from "./images/newpikachu.gif"
 import errorGif from "./images/original.gif"
 const FormItem = Form.Item;
-const Option = Select.Option;
 const { TextArea } = Input;
 const text = <span>quangaowork@gmail.com</span>;
 

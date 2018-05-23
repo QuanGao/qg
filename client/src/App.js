@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Sider from "./components/Sider";
 
-import Home from "./components/Home";
+// import Home from "./components/Home";
 
 class App extends Component {
   render() {

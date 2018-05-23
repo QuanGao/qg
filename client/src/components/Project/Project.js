@@ -1,5 +1,6 @@
 import React from 'react'
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+// import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Layout,Breadcrumb } from 'antd';
 import "./Project.css";
 
 
@@ -32,15 +33,4 @@ class Project extends React.Component {
 
 export default Project;
 
-                        {/* <Menu.Item key="11">
-                            <a href="https://github.com/QuanGao">
-                                <Icon type="github" />
-                                <span>Github</span>
-                            </a>
-                        </Menu.Item>
-                        <Menu.Item key="12">
-                            <a href="https://www.linkedin.com/in/quan-gao-code">
-                                <Icon type="linkedin" />
-                                <span>Linkedin</span>
-                            </a>
-                        </Menu.Item> */}
+                      
