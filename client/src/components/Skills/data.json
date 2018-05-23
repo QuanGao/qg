@@ -2,22 +2,26 @@
     "name": "DATABASES",
     "children": [{
             "name": "Mongo",
-            "size": 20859
+            "size": 20859,
+            "fontSize": 40
         },
         {
             "name": "Firebase",
-            "size": 4614
+            "size": 6114,
+            "fontSize": 24
         },
         {
-            "name": "mySQL",
-            "size": 10530
+            "name": "MySQL",
+            "size": 9030,
+            "fontSize": 24
         }
     ]
 },{
     "name": "DATA ANALYSIS",
     "children": [{
             "name": "R",
-            "size": 18000
+            "size": 18000,
+            "fontSize": 40
         },
         {
             "name": "Stata",
@@ -29,7 +33,8 @@
         },
         {
             "name": "Excel",
-            "size": 8703
+            "size": 8703,
+            "fontSize": 24
         }
     ]
 },
@@ -37,23 +42,27 @@
     "name": "CODING LANGUAGES",
     "children": [{
             "name": "Javascript",
-            "size": 15980
-        },
-        {
-            "name": "SQL",
-            "size": 9377
+            "size": 20980,
+            "fontSize": 40
         },
         {
             "name": "HTML",
-            "size": 5985
+            "size": 8377,
+            "fontSize": 24
         },
         {
             "name": "CSS",
+            "size": 6985,
+            "fontSize": 24
+        },
+        {
+            "name": "SQL",
             "size": 7862
+        
         },
         {
             "name": "Python",
-            "size": 5435
+            "size": 6435
         }
     ]
 },
@@ -61,27 +70,33 @@
     "name": "FRAMEWORK/LIBRARY",
     "children": [{
             "name": "Node.js",
-            "size": 20544
+            "size": 16544,
+            "fontSize": 24
         },
         {
             "name": "Express",
-            "size": 19788
+            "size": 14788,
+            "fontSize": 24
         },
         {
             "name": "JQuery",
-            "size": 10349
+            "size": 11349,
+            "fontSize": 24
         },
         {
             "name": "React",
-            "size": 9921
+            "size": 11921,
+            "fontSize": 24
         },
         {
             "name": "Handlebars.js",
-            "size": 11275
+            "size": 10275,
+            "fontSize": 24
         },
         {
             "name": "Bootstrap",
-            "size": 12147
+            "size": 13147,
+            "fontSize": 24
         },
         {
             "name": "Django",

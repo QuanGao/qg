@@ -2,9 +2,9 @@ import React from 'react'
 // import { Layout, Menu, Breadcrumb, Icon, Col, Row } from 'antd';
 import { Layout} from 'antd';
 import "./Skills.css";
-// import MyFooter from "../MyFooter"
+import MyFooter from "../MyFooter"
 import data from "./data.json";
-import {Treemap} from "recharts"
+import {Treemap} from "recharts";
 
 const { Header, Content, Footer} = Layout;
 //#E2CF45'#64c195
@@ -13,7 +13,7 @@ const COLORS = ['#f38c74','#F8C12D', '#64c195', '#8889DD'];
 
 class CustomizedContent extends React.Component{
   render() {
-    const { root, depth, x, y, width, height, index, payload, colors, rank, name } = this.props;
+    const { root, depth, x, y, width, height, index, payload, colors, rank, name,fontSize } = this.props;
 
     return (
       <g>
@@ -36,7 +36,7 @@ class CustomizedContent extends React.Component{
             y={y + height / 2 + 7}
             textAnchor="middle"
             fill="#fff"
-            fontSize={14}
+            fontSize={fontSize? fontSize:14}
           >
             {name}
           </text>
@@ -51,7 +51,7 @@ class CustomizedContent extends React.Component{
             fontSize={16}
             fillOpacity={0.9}
           >
-            {index + 1}{`: `+name}
+            {index + 1}{`. `+name}
           </text>
           : null
         }
@@ -67,16 +67,14 @@ class SimpleTreemap extends React.Component{
             {/* <Header style={{ background: '#fff', padding: 0 }} /> */}
             {/* <Content style={{ margin: '0 16px' , background: '#fff'}}> */}
             <Header style={{ background: '#fff', padding: 0 }}> 
-                <h1> MY TOOLBOX</h1><hr/>
+                <h1> MY TOOLBOX</h1>
             </Header>
             <Content>
                 {/* <div style={{ padding: 24, background: '#fff', minHeight: 360 }}> */}
                 <div>
                     <Treemap
-                        // width={400}
-                        // height={200}
                         width={800}
-                        height={400}
+                        height={450}
                         data={data}
                         dataKey="size"
                         ratio={4/3}
@@ -86,32 +84,8 @@ class SimpleTreemap extends React.Component{
                     />
                 </div> 
             </Content>
-            <Footer style={{ textAlign: 'center' }}>
-                Quan Gao ©2018 Web development Portfolio
-            </Footer> 
+            <MyFooter/> 
         </Layout>
-        // <div className="skills-container">
-        //     <Row>
-        //         <h1>S K I L L S</h1>
-        //     </Row>
-        //     <Row>
-        //         <Col span={24}>
-        //             <Treemap
-        //             // width={400}
-        //             // height={200}
-        //             width={800}
-        //             height={400}
-        //             data={data}
-        //             dataKey="size"
-        //             ratio={4/3}
-        //             stroke="#fff"
-        //             fill="#8884d8"
-        //             content={<CustomizedContent colors={COLORS}/>}
-        //             />
-        //         </Col>
-        //     </Row>
-    
-    //   </div>
     );
   }
 };

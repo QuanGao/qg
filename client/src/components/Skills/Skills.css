@@ -2,18 +2,14 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin:auto;
+    margin:20px auto;
 }
 
 .ant-layout-header h1 {
     text-align: center;
     letter-spacing: 3px;
+    margin:20px;
 
-}
-
-.ant-layout-header hr {
-   width: 800px;
-   margin:auto;
 }
 
 .ant-layout {
@@ -22,13 +18,4 @@
 
 .ant-layout-header {
     margin:30px;
-    /* color: #8889DD; */
-    /* color:#9597E4;
-    color:#8DC77B;
-    color:#A5D297;
-    color:#A5D297;
-    color:#E2CF45;
-    color:#F8C12D; */
 }
-
-/* const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D']; */
