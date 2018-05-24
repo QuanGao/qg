@@ -1,5 +1,6 @@
 import React from 'react'
 // import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import MyFooter from "../MyFooter"
 import { Layout,Breadcrumb } from 'antd';
 import "./Project.css";
 
@@ -23,9 +24,7 @@ class Project extends React.Component {
                     Project page
                     </div> 
                 </Content>
-                <Footer style={{ textAlign: 'center' }}>
-                    Quan Gao ©2018 Web development Portfolio
-                </Footer> 
+                <MyFooter/> 
             </Layout>
         )
     }

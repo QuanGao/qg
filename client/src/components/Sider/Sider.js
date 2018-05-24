@@ -6,6 +6,7 @@ import Skills from "../Skills"
 import Contact from "../Contact"
 import Project from "../Project"
 
+import ProgressBar from "../ProgressBar"
 
 const {Sider } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -38,27 +39,25 @@ class SiderDemo extends React.Component {
                             <Icon type="tool" />
                             <span>Skills</span>
                         </Menu.Item>
-                        <SubMenu key="sub1" title={<span><Icon type="user" /><span>Solo Work</span></span>}>              
-                            <Menu.Item key="4">Project1</Menu.Item>
-                            <Menu.Item key="5">Project2</Menu.Item>
-                            <Menu.Item key="6">Project3</Menu.Item>
-                        </SubMenu>
-                        <SubMenu key="sub2" title={<span><Icon type="team" /><span>Team Projects</span></span>}>                         
-                            <Menu.Item key="7">RoomieU</Menu.Item>
-                            <Menu.Item key="8">GetAway</Menu.Item>
-                            <Menu.Item key="9">DinnerSavior</Menu.Item>
-                        </SubMenu>
                         <Menu.Item key="3">
+                            <Icon type="user" />
+                            <span>Solo Work</span>
+                        </Menu.Item>
+                        <Menu.Item key="4">
+                            <Icon type="team" />
+                            <span>Team Projects</span>
+                        </Menu.Item>
+                        <Menu.Item key="5">
                             <Icon type="form" />
                             <span>Contact</span>
                         </Menu.Item>
-                        <Menu.Item key="10">
-                            <a href="https://github.com/QuanGao">
+                        <Menu.Item key="6">
+                            {/* <a href="https://github.com/QuanGao"> */}
                                 <Icon type="github" />
                                 <span>Github</span>
-                            </a>
+                            {/* </a> */}
                         </Menu.Item>
-                        <Menu.Item key="11">
+                        <Menu.Item key="7">
                             <a href="https://www.linkedin.com/in/quan-gao-code">
                                 <Icon type="linkedin" />
                                 <span>Linkedin</span>
@@ -66,11 +65,13 @@ class SiderDemo extends React.Component {
                         </Menu.Item>
 
                     </Menu>
-                </Sider>
+                </Sider>            
                 {this.state.activeKey==="1" ? <Home collapsed={this.state.collapsed}/>: 
                     (this.state.activeKey==="2" ? <Skills/>:
-                    (this.state.activeKey==="3" ?<Contact/>:
-                    (this.state.activeKey!=="10" && this.state.activeKey!=="11"?<Project/>:"")))}
+                    (this.state.activeKey==="5" ?<Contact/>:
+                    (this.state.activeKey==="3" || this.state.activeKey==="4"?<Project/>:
+                    <ProgressBar progressBarTitle={this.state.activeKey==="6"? "You are being redirected to Github..":
+                    "You are being redirected to Linkedin..."}/>)))}
             </Layout>
         );
     }

@@ -7,8 +7,6 @@ import data from "./data.json";
 import {Treemap} from "recharts";
 
 const { Header, Content, Footer} = Layout;
-//#E2CF45'#64c195
-// const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D'];
 const COLORS = ['#f38c74','#F8C12D', '#64c195', '#8889DD'];
 
 class CustomizedContent extends React.Component{
@@ -64,13 +62,10 @@ class SimpleTreemap extends React.Component{
 	render () {
   	return (
         <Layout className="content-wrapper">
-            {/* <Header style={{ background: '#fff', padding: 0 }} /> */}
-            {/* <Content style={{ margin: '0 16px' , background: '#fff'}}> */}
             <Header style={{ background: '#fff', padding: 0 }}> 
                 <h1> MY TOOLBOX <Icon type="gift" /></h1>
             </Header>
             <Content>
-                {/* <div style={{ padding: 24, background: '#fff', minHeight: 360 }}> */}
                 <div>
                     <Treemap
                         width={800}
