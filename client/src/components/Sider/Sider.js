@@ -52,10 +52,10 @@ class SiderDemo extends React.Component {
                             <span>Contact</span>
                         </Menu.Item>
                         <Menu.Item key="6">
-                            {/* <a href="https://github.com/QuanGao"> */}
+                            <a href="https://github.com/QuanGao">
                                 <Icon type="github" />
                                 <span>Github</span>
-                            {/* </a> */}
+                            </a>
                         </Menu.Item>
                         <Menu.Item key="7">
                             <a href="https://www.linkedin.com/in/quan-gao-code">
@@ -70,8 +70,8 @@ class SiderDemo extends React.Component {
                     (this.state.activeKey==="2" ? <Skills/>:
                     (this.state.activeKey==="5" ?<Contact/>:
                     (this.state.activeKey==="3" || this.state.activeKey==="4"?<Project/>:
-                    <ProgressBar progressBarTitle={this.state.activeKey==="6"? "You are being redirected to Github..":
-                    "You are being redirected to Linkedin..."}/>)))}
+                    <ProgressBar progressBarTitle={this.state.activeKey==="6"? "Redirecting to Quan's Github....":
+                    "Redirecting to Quan's Linkedin..."}/>)))}
             </Layout>
         );
     }

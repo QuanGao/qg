@@ -1,28 +1,22 @@
 import React from 'react'
 // import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import MyFooter from "../MyFooter"
-import { Layout,Breadcrumb } from 'antd';
+import { Layout} from 'antd';
 import "./Project.css";
 
+import LoadMoreList from "../LoadMoreList";
+import FancyList from "../FancyList";
 
 const { Header, Content, Footer} = Layout;
 class Project extends React.Component {
-    state = {
-      collapsed: false,
-    };
 
     render() {
         return (
             <Layout className="content-wrapper">
                 <Header style={{ background: '#fff', padding: 0 }} />
                 <Content style={{ margin: '0 16px' }}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
-                    <Breadcrumb.Item>User</Breadcrumb.Item>
-                    <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                    </Breadcrumb>
-                    <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-                    Project page
-                    </div> 
+                    <h1>Project page</h1>
+                    <LoadMoreList/>
                 </Content>
                 <MyFooter/> 
             </Layout>
