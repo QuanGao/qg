@@ -5,7 +5,8 @@ import Home from "../Home"
 import Skills from "../Skills"
 import Contact from "../Contact"
 import Project from "../Project"
-
+import LoadMoreList from "../LoadMoreList"
+import FancyList from "../FancyList"
 import ProgressBar from "../ProgressBar"
 
 const {Sider } = Layout;
@@ -22,6 +23,24 @@ class SiderDemo extends React.Component {
     };
     handleClick = (event) => {
         this.setState({activeKey: event.key})
+    };
+    renderMenuItem = (key) => {
+        switch(key) {
+            case "1":
+                return <Home/>;
+            case "2":
+                return <Skills/>;
+            case "3":
+                return <LoadMoreList/>;
+            case "4":
+                return <FancyList/>;
+            case "5":
+                return <ProgressBar progressBarTitle="Redirecting to Quan's Github...."/>;
+            case "6":
+                return <ProgressBar progressBarTitle="Redirecting to Quan's Linkedin..."/>;
+            default:
+                return <Home/>;
+        }
     }
     render() {
         return (
@@ -45,7 +64,7 @@ class SiderDemo extends React.Component {
                         </Menu.Item>
                         <Menu.Item key="4">
                             <Icon type="team" />
-                            <span>Team Projects</span>
+                            <span>Collaboration</span>
                         </Menu.Item>
                         <Menu.Item key="5">
                             <Icon type="form" />
@@ -65,13 +84,8 @@ class SiderDemo extends React.Component {
                         </Menu.Item>
 
                     </Menu>
-                </Sider>            
-                {this.state.activeKey==="1" ? <Home collapsed={this.state.collapsed}/>: 
-                    (this.state.activeKey==="2" ? <Skills/>:
-                    (this.state.activeKey==="5" ?<Contact/>:
-                    (this.state.activeKey==="3" || this.state.activeKey==="4"?<Project/>:
-                    <ProgressBar progressBarTitle={this.state.activeKey==="6"? "Redirecting to Quan's Github....":
-                    "Redirecting to Quan's Linkedin..."}/>)))}
+                </Sider>  
+                {this.renderMenuItem(this.state.activeKey)}          
             </Layout>
         );
     }
