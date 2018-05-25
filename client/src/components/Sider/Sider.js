@@ -5,12 +5,9 @@ import Home from "../Home"
 import Skills from "../Skills"
 import Contact from "../Contact"
 import Project from "../Project"
-import LoadMoreList from "../LoadMoreList"
-import FancyList from "../FancyList"
 import ProgressBar from "../ProgressBar"
 
 const {Sider } = Layout;
-const SubMenu = Menu.SubMenu;
 
 class SiderDemo extends React.Component {
     state = {
@@ -31,12 +28,13 @@ class SiderDemo extends React.Component {
             case "2":
                 return <Skills/>;
             case "3":
-                return <LoadMoreList/>;
             case "4":
-                return <FancyList/>;
+                return <Project projectType={key}/>;
             case "5":
-                return <ProgressBar progressBarTitle="Redirecting to Quan's Github...."/>;
+                return <Contact/>;
             case "6":
+                return <ProgressBar progressBarTitle="Redirecting to Quan's Github...."/>;
+            case "7":
                 return <ProgressBar progressBarTitle="Redirecting to Quan's Linkedin..."/>;
             default:
                 return <Home/>;
