@@ -36,13 +36,6 @@ class LoadMoreList extends React.Component {
     window.scrollTo(0, 0)
   };
   scrollToView = () => {
-    // var doc = document.documentElement;
-    // var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-
-    // if (top > 0) {
-    //     window.scrollTo(0, top - 15)
-    //     setTimeout(this.scrollToTop, 10)
-    // }
     this.messagesEnd.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -56,9 +49,6 @@ class LoadMoreList extends React.Component {
         loadingMore: false,
       }, () => {
         this.scrollToView();
-        // Resetting window's offsetTop so as to display react-virtualized demo underfloor.
-        // In real scene, you can using public method of react-virtualized:
-        // https://stackoverflow.com/questions/46700726/how-to-use-public-method-updateposition-of-react-virtualized
         window.dispatchEvent(new Event('resize'));
       });
     });

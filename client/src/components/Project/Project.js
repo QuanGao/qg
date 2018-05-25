@@ -16,7 +16,8 @@ class Project extends React.Component {
                 <Header style={{ background: '#fff', padding: 0 }} />
                 <Content style={{ margin: '0 16px' }}>
                     <h1>Project page</h1>
-                    <LoadMoreList/>
+                    {/* <LoadMoreList/> */}
+                    <FancyList/>
                 </Content>
                 <MyFooter/> 
             </Layout>
