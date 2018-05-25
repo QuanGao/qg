@@ -22,7 +22,6 @@ class Project extends React.Component {
                 <Content style={{ margin: '0 16px' }}>
                     <h1>Project page</h1>
                     {this.renderProjects(this.props.projectType)}
-                    <FancyList/>
                 </Content>
                 <MyFooter/> 
             </Layout>
