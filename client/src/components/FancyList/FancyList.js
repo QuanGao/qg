@@ -39,7 +39,7 @@ const FancyList = () =>(
             key={item.title}
             actions={[<IconText type="star-o" text={item.stars} />, 
             <IconText type="like-o" text={item.likes}  />, 
-            <IconText type="message" text={item.comments.length} />,
+            <IconText type="message" text={item.notes.length} />,
             <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
             <a><Icon type="code-o"/></a>
         ]}

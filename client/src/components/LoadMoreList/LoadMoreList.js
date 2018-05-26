@@ -86,7 +86,7 @@ class LoadMoreList extends React.Component {
             <div>
                 <IconText type="star-o" text={item.stars} /> <Divider type="vertical"/>
                 <IconText type="like-o" text={item.likes} /> <Divider type="vertical"/>
-                <IconText type="message" text={item.comments.length} />
+                <IconText type="message" text={item.notes.length} />
             </div>
           </List.Item>
         )}
