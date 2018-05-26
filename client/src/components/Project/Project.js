@@ -12,16 +12,20 @@ class Project extends React.Component {
     constructor(props) {
         super(props)
     }
-    renderProjects = (projectType)=>{
+    renderProjectContent = (projectType)=>{
         return projectType==="3"? <LoadMoreList/>:<FancyList/>
+    }
+    renderProjectHeader = (projectType)=>{
+        return projectType==="3"? <h1>Independent Projects</h1>:<h1>Team Projects</h1>
     }
     render() {
         return (
             <Layout className="content-wrapper">
-                <Header style={{ background: '#fff', padding: 0 }} />
-                <Content style={{ margin: '0 16px' }}>
-                    <h1>Project page</h1>
-                    {this.renderProjects(this.props.projectType)}
+                <Header style={{ background: '#fff', padding: 0 }} >
+                    {this.renderProjectHeader(this.props.projectType)}
+                </Header>
+                <Content style={{ margin: '0 16px', padding:20}}>                   
+                    {this.renderProjectContent(this.props.projectType)}
                 </Content>
                 <MyFooter/> 
             </Layout>

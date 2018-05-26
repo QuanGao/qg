@@ -33,11 +33,16 @@ const FancyList = () =>(
         pageSize: 3,
     }}
     dataSource={listData}
-    footer={<div><b>ant design</b> footer part</div>}
+    footer={<div><b>Feel free to leave a comment and let me know what you think!</b></div>}
     renderItem={item => (
         <List.Item
             key={item.title}
-            actions={[<IconText type="star-o" text="156" />, <IconText type="like-o" text="156" />, <IconText type="message" text="2" />]}
+            actions={[<IconText type="star-o" text="156" />, 
+            <IconText type="like-o" text="156" />, 
+            <IconText type="message" text="2" />,
+            <a><Icon type="caret-right"/></a>,
+            <a><Icon type="code-o"/></a>
+        ]}
             extra={<img width={272} alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" />}
         >
             <List.Item.Meta
@@ -52,4 +57,7 @@ const FancyList = () =>(
 
 export default FancyList;
 
-                      
+      
+                    
+
+       

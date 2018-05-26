@@ -1,201 +1,118 @@
 [{
-        "gender": "female",
-        "name": {
-            "title": "mrs",
-            "first": "diana",
-            "last": "carr"
-        },
-        "email": "diana.carr@example.com",
-        "nat": "IE"
+        "title": "MassEffect_CrewAssembly",
+        "codeLink": "https://github.com/QuanGao/MassEffect_CrewAssembly",
+        "pageLink": "https://mass-effect-homework.herokuapp.com/",
+        "description": "A MASS EFFECT themed memory game built with react",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
     },
     {
-        "gender": "female",
-        "name": {
-            "title": "miss",
-            "first": "andrea",
-            "last": "little"
-        },
-        "email": "andrea.little@example.com",
-        "nat": "IE"
-    },
-    {
-        "gender": "male",
-        "name": {
-            "title": "mr",
-            "first": "nelson",
-            "last": "garza"
-        },
-        "email": "nelson.garza@example.com",
-        "nat": "US"
-    },
-    {
-        "gender": "male",
-        "name": {
-            "title": "mr",
-            "first": "viktor",
-            "last": "beyer"
-        },
-        "email": "viktor.beyer@example.com",
-        "nat": "DE"
-    },
-    {
-        "gender": "male",
-        "name": {
-            "title": "mr",
-            "first": "timmothy",
-            "last": "turner"
-        },
-        "email": "timmothy.turner@example.com",
-        "nat": "AU"
-    },
-    {
-        "gender": "male",
-        "name": {
-            "title": "mr",
-            "first": "gustav",
-            "last": "møller"
-        },
-        "email": "gustav.møller@example.com",
-        "nat": "DK"
-    },
-    {
-        "gender": "female",
-        "name": {
-            "title": "ms",
-            "first": "jubeline",
-            "last": "vieira"
-        },
-        "email": "jubeline.vieira@example.com",
-        "nat": "BR"
-    },
-    {
-        "gender": "female",
-        "name": {
-            "title": "mrs",
-            "first": "sonialange",
-            "last": "lima"
-        },
-        "email": "sonialange.lima@example.com",
-        "nat": "BR"
-    },
-    {
-        "gender": "male",
-        "name": {
-            "title": "mr",
-            "first": "mason",
-            "last": "hughes"
-        },
-        "email": "mason.hughes@example.com",
-        "nat": "NZ"
-    },
-    {
-        "gender": "female",
-        "name": {
-            "title": "mrs",
-            "first": "madison",
-            "last": "roberts"
-        },
-        "email": "madison.roberts@example.com",
-        "nat": "NZ"
-    },
-    {
-        "gender": "female",
-        "name": {
-            "title": "mrs",
-            "first": "diana",
-            "last": "carr"
-        },
-        "email": "diana.carr@example.com",
-        "nat": "IE"
-    },
-    {
-        "gender": "female",
-        "name": {
-            "title": "miss",
-            "first": "andrea",
-            "last": "little"
-        },
-        "email": "andrea.little@example.com",
-        "nat": "IE"
-    },
-    {
-        "gender": "male",
-        "name": {
-            "title": "mr",
-            "first": "nelson",
-            "last": "garza"
-        },
-        "email": "nelson.garza@example.com",
-        "nat": "US"
-    },
-    {
-        "gender": "male",
-        "name": {
-            "title": "mr",
-            "first": "viktor",
-            "last": "beyer"
-        },
-        "email": "viktor.beyer@example.com",
-        "nat": "DE"
-    },
-    {
-        "gender": "male",
-        "name": {
-            "title": "mr",
-            "first": "timmothy",
-            "last": "turner"
-        },
-        "email": "timmothy.turner@example.com",
-        "nat": "AU"
-    },
-    {
-        "gender": "male",
-        "name": {
-            "title": "mr",
-            "first": "gustav",
-            "last": "møller"
-        },
-        "email": "gustav.møller@example.com",
-        "nat": "DK"
-    },
-    {
-        "gender": "female",
-        "name": {
-            "title": "ms",
-            "first": "jubeline",
-            "last": "vieira"
-        },
-        "email": "jubeline.vieira@example.com",
-        "nat": "BR"
-    },
-    {
-        "gender": "female",
-        "name": {
-            "title": "mrs",
-            "first": "sonialange",
-            "last": "lima"
-        },
-        "email": "sonialange.lima@example.com",
-        "nat": "BR"
-    },
-    {
-        "gender": "male",
-        "name": {
-            "title": "mr",
-            "first": "mason",
-            "last": "hughes"
-        },
-        "email": "mason.hughes@example.com",
-        "nat": "NZ"
-    },
-    {
-        "gender": "female",
-        "name": {
-            "title": "mrs",
-            "first": "madison",
-            "last": "roberts"
-        },
-        "email": "madison.roberts@example.com",
-        "nat": "NZ"
+        "title": "Rock-Paper-Scissor",
+        "codeLink": "https://github.com/QuanGao/RPS-Multiplayer",
+        "pageLink": "https://quangao.github.io/RPS-Multiplayer/",
+        "description": "A two player rock paper scissor game powered by Firebase!",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
+    }, {
+        "title": "TimeToGetGIPHY",
+        "codeLink": "https://github.com/QuanGao/TimeToGetGIPHY",
+        "pageLink": "https://quangao.github.io/TimeToGetGIPHY/",
+        "description": "Disney princess themed gif generatopr with GIPHY API",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
+    }, {
+        "title": "Star Wars RPG",
+        "codeLink": "https://github.com/QuanGao/Star-Wars-Game",
+        "pageLink": "https://quangao.github.io/Star-Wars-Game/",
+        "description": "Star wars themed turn based battle game",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
+    }, {
+        "title": "Hangman-Game",
+        "codeLink": "https://github.com/QuanGao/Hangman-Game",
+        "pageLink": "https://quangao.github.io/Hangman-Game/",
+        "description": "Superhero themed hangman game",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
+    }, {
+        "title": "Supernatural Trivia Game",
+        "codeLink": "https://github.com/QuanGao/TriviaGame",
+        "pageLink": "https://quangao.github.io/TriviaGame/",
+        "description": "Trivia game based on TV shown SUPERNATURAL. Expect great gifs!",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
+    }, {
+        "title": "News Scraper",
+        "codeLink": "https://github.com/QuanGao/MongoScraper",
+        "pageLink": "https://arcane-everglades-10622.herokuapp.com/",
+        "description": "Fresh News Scraping site lets you browse/save/comment newest gaming news!",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
+    }, {
+        "title": "Who is da burger king?",
+        "codeLink": "https://github.com/QuanGao/sequelizedBurger",
+        "pageLink": "https://mighty-fortress-87600.herokuapp.com/index",
+        "description": "Burger logger with MySQL,Node,Express,Handlebars and sequelize library",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
+    }, {
+        "title": "Burger Addiction",
+        "codeLink": "https://github.com/QuanGao/Burger",
+        "pageLink": "https://fathomless-reef-79424.herokuapp.com/index",
+        "description": "Burger logger with MySQL,Node,Express,Handlebars and a homemade ORM",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
+    }, {
+        "title": "Friend Finder",
+        "codeLink": "https://github.com/QuanGao/FriendFinder",
+        "pageLink": "https://vast-scrubland-28230.herokuapp.com/",
+        "description": "An express app that matches users with the highest compatibility based on a short survey.",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
+    }, {
+        "title": "Bamazon",
+        "codeLink": "https://github.com/QuanGao/bamazon",
+        "description": "An Amazon-like storefront CLI written in Node.js",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
+    },{
+        "title": "Constructor-Hangman",
+        "codeLink": "https://github.com/QuanGao/Constructor-Hangman",
+        "description": "A command line based node hangman game",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
+    },{
+        "title": "Quan Gao's Portforlio Page",
+        "codeLink": "https://github.com/QuanGao/portfolio",
+        "pageLink": "https://quangao.github.io/portfolio/",
+        "description": "Use HTML, CSS, and Bootstrap to build responsive website to showcase my projects.",
+        "likes": 0,
+        "stars": 0,
+        "comments": ["comment1", "comment2"]
+
     }
 ]

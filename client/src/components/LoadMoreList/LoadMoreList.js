@@ -1,9 +1,16 @@
 import React from 'react'
-import { List, Avatar, Button, Spin } from 'antd';
+import { List, Avatar, Button, Spin, Icon, Divider} from 'antd';
 import "./LoadMoreList.css"
 import axios from 'axios';
 import SProjects from "./SProjects.json"
+import profile from "./images/quan.jpg"
 
+const IconText = ({ type, text }) => (
+    <span>
+      <Icon type={type} style={{ marginRight: 8 }} />
+      {text}
+    </span>
+  );
 const maxBatches = Math.ceil(SProjects.length/5);
 let batch = 0;
 class LoadMoreList extends React.Component {
@@ -69,13 +76,18 @@ class LoadMoreList extends React.Component {
         loadMore={loadMore}
         dataSource={data}
         renderItem={item => (
-          <List.Item actions={[<a>edit</a>, <a>more</a>]}>
+          <List.Item actions={[<a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
+                                <a href={item.codeLink}><Icon type="code-o"/></a>]}>
             <List.Item.Meta
-              avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-              title={<a href="https://ant.design">{item.name.last}</a>}
-              description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+              avatar={<Avatar src={profile} />}            
+              title={<a href={item.pageLink}>{item.title}</a>}
+              description={item.description}
             />
-            <div>content</div>
+            <div>
+                <IconText type="star-o" text={item.stars} /> <Divider type="vertical"/>
+                <IconText type="like-o" text={item.likes} /> <Divider type="vertical"/>
+                <IconText type="message" text={item.comments.length} />
+            </div>
           </List.Item>
         )}
       />
