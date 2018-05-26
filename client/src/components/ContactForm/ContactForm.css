@@ -1,9 +1,6 @@
-.ant-form-item{
-    font-family: 'Roboto', sans-serif;
-}
 .contact h1 {
-    font-weight: bolder;
     text-align: center;
+    letter-spacing: 2px; 
 }
 .contact p {
     line-height: 22px;

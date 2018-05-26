@@ -1,0 +1,36 @@
+[{
+        "title": "RoomieU",
+        "codeLink": "https://github.com/QuanGao/roomieU",
+        "pageLink": "https://roomieu.herokuapp.com/",
+        "description": "A site for university students to find their ideal roommate.",
+        "likes": 0,
+        "stars": 0,
+        "imgSrc": "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1500660066/travel-hacks-opener-TRAVELHACK0717.jpg?itok=HgP9J2B_",
+        "content": "We matched you with potential roommates from same univeristy based on expectations on rent, distance from campus, and personality compatibility",
+        "comments": ["comment1", "comment2"]
+
+    },
+    {
+        "title": "GetAway",
+        "codeLink": "https://github.com/QuanGao/GetawayPlan",
+        "pageLink": "https://quiet-waters-49992.herokuapp.com/",
+        "description": "Travel planner that minimize planning and maximizes fun for your next trip",
+        "likes": 0,
+        "stars": 0,
+        "imgSrc": "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1500660066/travel-hacks-opener-TRAVELHACK0717.jpg?itok=HgP9J2B_",
+        "content": "You LOVE to travel….but HATE all the planning that comes along with it? Planning out your days on where to go / what to eat, can not only be time consuming, but frustrating when you don't know your options.",
+        "comments": ["comment1", "comment2"]
+
+    }, {
+        "title": "Dinner Savior",
+        "codeLink": "https://github.com/QuanGao/dinner-savior",
+        "pageLink": "https://quangao.github.io/dinner-savior/",
+        "description": "Firebase powered web app that provides wait time at popular restaurants in real time",
+        "likes": 0,
+        "stars": 0,
+        "imgSrc": "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1500660066/travel-hacks-opener-TRAVELHACK0717.jpg?itok=HgP9J2B_",
+        "content": "A firebase powered web application that allows users report/access wait time at a restaurant in real time. If you decide it is not worth the wait, we offer you three hand picked recipes to cook at home according to the types of restaurants you searched for.",
+        "comments": ["comment1", "comment2"]
+
+    }
+]

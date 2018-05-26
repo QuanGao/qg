@@ -80,7 +80,7 @@ class LoadMoreList extends React.Component {
                                 <a href={item.codeLink}><Icon type="code-o"/></a>]}>
             <List.Item.Meta
               avatar={<Avatar src={profile} />}            
-              title={<a href={item.pageLink}>{item.title}</a>}
+              title={<a href={item.pageLink ||item.codeLink }>{item.title}</a>}
               description={item.description}
             />
             <div>
