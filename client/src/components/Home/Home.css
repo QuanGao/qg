@@ -7,12 +7,13 @@
     position: relative;
 }
 .bio {
-    padding: 20px;  
+    padding: 30px;  
     background-color: rgba(255, 255, 255, 0.4);
     width: 400px;
     margin-top: 80px;
-    margin-left: 310px;
-    
+    margin-left: 320px;
+    position: relative;
+    left:20px;
     box-shadow: 10px 10px 5px grey;
 }
 .bio h1 {
@@ -27,5 +28,7 @@
     .bio {
         margin-left: auto;
         margin-right: auto;
+        left:30px;
+
     }
 }
