@@ -5,7 +5,11 @@
         "description": "A MASS EFFECT themed memory game built with react",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
     },
     {
@@ -15,7 +19,11 @@
         "description": "A two player rock paper scissor game powered by Firebase!",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
     }, {
         "title": "TimeToGetGIPHY",
@@ -24,7 +32,11 @@
         "description": "Disney princess themed gif generatopr with GIPHY API",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
     }, {
         "title": "Star Wars RPG",
@@ -33,7 +45,11 @@
         "description": "Star wars themed turn based battle game",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
     }, {
         "title": "Hangman-Game",
@@ -42,7 +58,11 @@
         "description": "Superhero themed hangman game",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
     }, {
         "title": "Supernatural Trivia Game",
@@ -51,7 +71,11 @@
         "description": "Trivia game based on TV shown SUPERNATURAL. Expect great gifs!",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
     }, {
         "title": "News Scraper",
@@ -60,7 +84,11 @@
         "description": "Fresh News Scraping site lets you browse/save/comment newest gaming news!",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
     }, {
         "title": "Who is da burger king?",
@@ -69,7 +97,11 @@
         "description": "Burger logger with MySQL,Node,Express,Handlebars and sequelize library",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
     }, {
         "title": "Burger Addiction",
@@ -78,7 +110,11 @@
         "description": "Burger logger with MySQL,Node,Express,Handlebars and a homemade ORM",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
     }, {
         "title": "Friend Finder",
@@ -87,7 +123,11 @@
         "description": "An express app that matches users with the highest compatibility based on a short survey.",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
     }, {
         "title": "Bamazon",
@@ -95,24 +135,36 @@
         "description": "An Amazon-like storefront CLI written in Node.js",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
-    },{
+    }, {
         "title": "Constructor-Hangman",
         "codeLink": "https://github.com/QuanGao/Constructor-Hangman",
         "description": "A command line based node hangman game",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
-    },{
+    }, {
         "title": "Quan Gao's Portforlio Page",
         "codeLink": "https://github.com/QuanGao/portfolio",
         "pageLink": "https://quangao.github.io/portfolio/",
         "description": "Use HTML, CSS, and Bootstrap to build responsive website to showcase my projects.",
         "likes": 0,
         "stars": 0,
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "solo",
+        "imgSrc": "image source for solo projects",
+        "keywords": ["javascript", "html"],
+        "content": "whatevercontent"
 
     }
 ]

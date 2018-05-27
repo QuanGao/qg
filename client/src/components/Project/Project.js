@@ -1,7 +1,7 @@
 import React from 'react'
-// import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import MyFooter from "../MyFooter"
 import { Layout} from 'antd';
+import API from "../../utils/API"
 import "./Project.css";
 
 import LoadMoreList from "../LoadMoreList";
@@ -10,8 +10,21 @@ import FancyList from "../FancyList";
 const { Header, Content} = Layout;
 class Project extends React.Component {
     constructor(props) {
-        super(props)
+        super(props),
+        this.state = {
+            SProjectdata: {},
+            TProjectdata: {}
+        }
     }
+
+    componentDidMount(){
+ 
+        API.getProjectData().then(
+            
+            data=>console.log(data)
+        )
+    }
+
     renderProjectContent = (projectType)=>{
         return projectType==="3"? <LoadMoreList/>:<FancyList/>
     }

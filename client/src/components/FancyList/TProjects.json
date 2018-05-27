@@ -7,7 +7,9 @@
         "stars": 0,
         "imgSrc": "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1500660066/travel-hacks-opener-TRAVELHACK0717.jpg?itok=HgP9J2B_",
         "content": "We matched you with potential roommates from same univeristy based on expectations on rent, distance from campus, and personality compatibility",
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "team",
+        "keywords": []
 
     },
     {
@@ -19,7 +21,9 @@
         "stars": 0,
         "imgSrc": "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1500660066/travel-hacks-opener-TRAVELHACK0717.jpg?itok=HgP9J2B_",
         "content": "You LOVE to travel….but HATE all the planning that comes along with it? Planning out your days on where to go / what to eat, can not only be time consuming, but frustrating when you don't know your options.",
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "team",
+        "keywords": []
 
     }, {
         "title": "Dinner Savior",
@@ -30,7 +34,9 @@
         "stars": 0,
         "imgSrc": "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1500660066/travel-hacks-opener-TRAVELHACK0717.jpg?itok=HgP9J2B_",
         "content": "A firebase powered web application that allows users report/access wait time at a restaurant in real time. If you decide it is not worth the wait, we offer you three hand picked recipes to cook at home according to the types of restaurants you searched for.",
-        "notes": ["comment1", "comment2"]
+        "notes": [],
+        "category": "team",
+        "keywords": []
 
     }
 ]

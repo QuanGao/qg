@@ -6,8 +6,15 @@ module.exports = {
             dbProject => res.json(dbProject)
         ).catch(err => res.json(err))
     },
+
+    add: (req, res) => {
+        db.Project.create(req.body).then(
+            dbProject => res.json(dbProject)
+        ).catch(err => res.json(err))
+    },
+
     addLike: (req, res) => {
-        db.Project.update({
+        db.Project.findOneAndUpdate({
             _id:req.params.projectId
         }, {
             $inc:{
@@ -26,9 +33,9 @@ module.exports = {
         ).catch(err => res.json(err))  
     },
     unLike: (req, res) => {
-        db.Project.update({
+        db.Project.findOneAndUpdate({
             _id:req.params.projectId,
-            likes: { $gte: 1} 
+            likes: { $gt: 0} 
         }, {
             $inc:{
                 likes:-1
@@ -46,7 +53,7 @@ module.exports = {
         ).catch(err => res.json(err))  
     },
     addStar: (req, res) => {
-        db.Project.update({
+        db.Project.findOneAndUpdate({
             _id:req.params.projectId
         }, {
             $inc:{
@@ -65,9 +72,9 @@ module.exports = {
         ).catch(err => res.json(err))  
     },
     unStar: (req, res) => {
-        db.Project.update({
+        db.Project.findOneAndUpdate({
             _id:req.params.projectId,
-            stars: { $gte: 1} 
+            stars: { $gt: 0} 
         }, {
             $inc:{
                 stars:-1

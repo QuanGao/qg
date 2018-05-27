@@ -6,6 +6,6 @@ router.put("/like/:projectId", projectController.addLike)
 router.put("/unlike/:projectId", projectController.unLike)
 router.put("/star/:projectId", projectController.addStar)
 router.put("/unstar/:projectId", projectController.unStar)
-
+router.post("/", projectController.add)
 
 module.exports = router 
