@@ -6,6 +6,16 @@ module.exports = {
             dbProject => res.json(dbProject)
         ).catch(err => res.json(err))
     },
+    findSolo: (req, res) => {
+        db.Project.find({category:"solo"}).populate("notes").then(
+            dbProject => res.json(dbProject)
+        ).catch(err => res.json(err))
+    },
+    findTeam: (req, res) => {
+        db.Project.find({category:"team"}).populate("notes").then(
+            dbProject => res.json(dbProject)
+        ).catch(err => res.json(err))
+    },
 
     add: (req, res) => {
         db.Project.create(req.body).then(

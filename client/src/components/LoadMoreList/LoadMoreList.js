@@ -2,7 +2,7 @@ import React from 'react'
 import { List, Avatar, Button, Spin, Icon, Divider} from 'antd';
 import "./LoadMoreList.css"
 import axios from 'axios';
-import SProjects from "./SProjects.json"
+import API from "../../utils/API"
 import profile from "./images/quan.jpg"
 
 const IconText = ({ type, text }) => (
@@ -11,32 +11,46 @@ const IconText = ({ type, text }) => (
       {text}
     </span>
   );
-const maxBatches = Math.ceil(SProjects.length/5);
+
 let batch = 0;
 class LoadMoreList extends React.Component {
-  state = {
-    loading: true,
-    loadingMore: false,
-    showLoadingMore: true,
-    data: []
-  }
-  componentDidMount() {
-    this.getData((res) => {
-      this.setState({
-        loading: false,
-        data: res
-      });
-    });
-  }
-  getData = (callback) => {
+    state = {
+        loading: true,
+        loadingMore: false,
+        showLoadingMore: true,
+        data: []
+    }
+
+
+    componentDidMount(){
+        API.getSProjectData().then(        
+            projectData=>{
+                this.setState({
+                    data: projectData.data,
+                    loading: false,
+                })
+            }
+        )
+    }
+    // componentDidMount() {
+    //     this.getData((res) => {
+    //     this.setState({
+    //         loading: false,
+    //         data: res
+    //     });
+    //     });
+    // }
+    getData = (callback) => {
         batch++;
-        const res = SProjects.slice(0, batch*5)
-        if(batch===maxBatches){
-            this.setState({
-                showLoadingMore:false
-            })
-        }
-        callback(res)
+        // const res = this.props.data.slice(0, batch*5)
+        // console.log(this.props.data)
+        // const maxBatches = Math.ceil(this.props.data.length/5);
+        // if(batch===maxBatches){
+        //     this.setState({
+        //         showLoadingMore:false
+        //     })
+        // }
+        // callback(res)
   }
 
   scrollToTop = () => {
