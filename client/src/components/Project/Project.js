@@ -12,11 +12,11 @@ class Project extends React.Component {
         super(props)
     }
 
-    renderProjectContent = (projectType)=>{
+    renderProjectContent = (projectType) => {
         return projectType==="3"? <LoadMoreList/>:<FancyList/>
             
     }
-    renderProjectHeader = (projectType)=>{
+    renderProjectHeader = (projectType) => {
         return projectType==="3"? <h1>Independent Projects</h1>:<h1>Team Projects</h1>
     }
     render() {

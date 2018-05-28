@@ -5,13 +5,14 @@ import axios from 'axios';
 import API from "../../utils/API"
 import profile from "./images/quan.jpg"
 import scrollToComponent from 'react-scroll-to-component';
+import CommentBtn from "../CommentBtn";
 
-const IconText = ({ type, text }) => (
-    <span>
-      <Icon type={type} style={{ marginRight: 8 }} />
-      {text}
-    </span>
-  );
+// const IconText = ({ type, text }) => (
+//     <span>
+//       <Icon type={type} style={{ marginRight: 8 }} />
+//       {text}
+//     </span>
+//   );
 
 let batch = 0;
 class LoadMoreList extends React.Component {
@@ -23,14 +24,13 @@ class LoadMoreList extends React.Component {
         dataToLoad: []
     }
 
-
     componentDidMount(){
         API.getSProjectData().then(        
             projectData=>{
                 this.setState({
                     data: projectData.data,
                     loading: false,
-                }, ()=>this.getDataToLoad(
+                }, () => this.getDataToLoad(
                     (res)=>this.setState({
                         dataToLoad: res
                     })
@@ -38,6 +38,7 @@ class LoadMoreList extends React.Component {
             }
         )
     }
+
     getDataToLoad = (callback) => {
         batch++;
         const res = this.state.data.slice(0, batch*5)
@@ -87,8 +88,8 @@ class LoadMoreList extends React.Component {
         itemLayout="horizontal"
         loadMore={loadMore}
         dataSource={dataToLoad}
-        renderItem={(item,i) => (
-          <List.Item  actions={[<a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
+        renderItem={(item) => (
+          <List.Item actions={[<a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
                                 <a href={item.codeLink}><Icon type="code-o"/></a>]}>
             <List.Item.Meta
               avatar={<Avatar src={profile} />}            
@@ -96,9 +97,10 @@ class LoadMoreList extends React.Component {
               description={item.description}
             />
             <div>
-                <IconText type="star-o" text={item.stars} /> <Divider type="vertical"/>
-                <IconText type="like-o" text={item.likes} /> <Divider type="vertical"/>
-                <IconText type="message" text={item.notes.length} />
+                {/* <IconText type="star-o" text={item.stars} /> <Divider type="vertical"/>
+                <IconText type="like-o" text={item.likes} /> <Divider type="vertical"/> */}
+                {/* <IconText type="message" text={item.notes.length} /> */}
+                <CommentBtn projectId={item._id} notes={item.notes}/>
             </div>
           </List.Item>
         )}
