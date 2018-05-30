@@ -4,6 +4,8 @@ import "./FancyList.css";
 import API from "../../utils/API"
 import { List, Avatar, Icon } from 'antd';
 
+import CommentBtn from "../CommentBtn";
+
 const IconText = ({ type, text }) => (
   <span>
     <Icon type={type} style={{ marginRight: 8 }} />
@@ -43,7 +45,7 @@ class FancyList extends React.Component{
                     key={item.title}
                     actions={[<IconText type="star-o" text={item.stars} />, 
                     <IconText type="like-o" text={item.likes}  />, 
-                    <IconText type="message" text={item.notes.length} />,
+                    <CommentBtn projectId={item._id}/>,
                     <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
                     <a><Icon type="code-o"/></a>
                 ]}
