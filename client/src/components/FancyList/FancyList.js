@@ -7,6 +7,7 @@ import { List, Avatar, Icon } from 'antd';
 import CommentBtn from "../CommentBtn";
 import LikeBtn from "../LikeBtn";
 import StarBtn from "../StarBtn";
+import FancyListFooter from "../FancyListFooter"
 
 const IconText = ({ type, text }) => (
   <span>
@@ -41,10 +42,11 @@ class FancyList extends React.Component{
                 pageSize: 3,
             }}
             dataSource={this.state.listData}
-            footer={<div><b>Feel free to leave a comment and let me know what you think!</b></div>}
-            renderItem={item => (
+            footer = {<FancyListFooter/>}
+            renderItem={(item,i) => (
                 <List.Item
                     key={item.title}
+                    id={`TProject${i}`}
                     actions={[
                     <StarBtn projectId={item._id}/>,
                     <LikeBtn projectId={item._id}/>,
