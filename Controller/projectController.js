@@ -6,6 +6,13 @@ module.exports = {
             dbProject => res.json(dbProject)
         ).catch(err => res.json(err))
     },
+
+    findOne: (req, res) => {
+        db.Project.findOne({_id: req.params.projectId}).populate("notes").then(
+            dbProject => res.json(dbProject)
+        ).catch(err => res.json(err))
+    },
+
     findSolo: (req, res) => {
         db.Project.find({category:"solo"}).populate("notes").then(
             dbProject => res.json(dbProject)

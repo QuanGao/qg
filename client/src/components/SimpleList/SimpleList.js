@@ -2,6 +2,8 @@ import React from "react"
 
 import { List, Avatar } from 'antd';
 
+import "./SimpleList.css"
+
 const SimpleList = (props) =>
 (<List
     itemLayout="horizontal"
@@ -9,7 +11,6 @@ const SimpleList = (props) =>
     renderItem={item => (
       <List.Item>
         <List.Item.Meta
-        //   avatar={ <Avatar style={{ backgroundColor: '#87d068' }} icon="user" />}
           avatar={ <Avatar icon="user" style={{ color: '#f56a00', backgroundColor: '#fde3cf' }} />}
           title={`Anonymous User @ ${item.createdAt.split("T")[0]}`}
           description={item.content}

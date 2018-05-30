@@ -9,6 +9,8 @@ export default {
 
     getTProjectData: () => axios.get("/project/team"),
 
+    getOneProjectData: (projectId) => axios.get(`/project/id/${projectId}`),
+
     likeProject: (projectId) => axios.put(`/project/like/${projectId}`),
 
     unlikeProject: (projectId) => axios.put(`/project/unlike/${projectId}`),

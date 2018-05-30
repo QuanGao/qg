@@ -18,9 +18,12 @@ module.exports = {
                 }, {
                     new: true
                 })
-            }).then(dbProject => 
-                res.json(dbProject)
-            ).catch(err => res.json(err)
+            }).then(
+            dbProject => {
+                return db.Project.findById(req.params.projectId).populate("notes")
+                .then(WithNote => res.json(WithNote))
+                
+            }).catch(err => res.json(err)
         )
     }
 }
