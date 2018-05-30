@@ -1,7 +1,11 @@
 import React from 'react'
-import {Modal, Button, Icon} from 'antd';
+import {Modal, Button, Icon, Input} from 'antd';
 import "./CommentBtn.css";
 import API from "../../utils/API"
+import SimpleList from "../SimpleList"
+
+const {TextArea} = Input
+
 
 class CommentBtn extends React.Component { 
     // constructor(props) {
@@ -65,14 +69,18 @@ class CommentBtn extends React.Component {
             {/* <Button type="primary" onClick={this.showModal}>Open</Button> */}
             <IconText type="message" text={this.props.notes.length} />
             {/* <Icon type="message" onClick={this.showModal} /> */}
-            <Modal title="Title"
+            <Modal title={this.props.projectName}
               visible={visible}
               onOk={this.handleOk}
               confirmLoading={confirmLoading}
               onCancel={this.handleCancel}
             >
-              {/* <p>{ModalText}</p> */}
-              <p>{this.props.notes.length>0?this.props.notes[0].content:""}</p>
+            {this.props.notes.length>0?
+                <div><h3 style={{color: "#1a8fff"}}><Icon type="plus-circle-o" /> Comment </h3><SimpleList data={this.props.notes}/></div>: 
+                <div><h3 style={{color: "#1a8fff"}}><Icon type="plus-circle-o" /> Comment </h3></div>}
+                               
+                {/* <TextArea placeholder="Autosize height based on content lines" autosize /> */}
+
             </Modal>
           </div>
         );

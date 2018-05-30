@@ -100,7 +100,7 @@ class LoadMoreList extends React.Component {
                 {/* <IconText type="star-o" text={item.stars} /> <Divider type="vertical"/>
                 <IconText type="like-o" text={item.likes} /> <Divider type="vertical"/> */}
                 {/* <IconText type="message" text={item.notes.length} /> */}
-                <CommentBtn projectId={item._id} notes={item.notes}/>
+                <CommentBtn projectId={item._id} projectName={item.title} notes={item.notes}/>
             </div>
           </List.Item>
         )}
