@@ -42,7 +42,7 @@ class CommentBtn extends React.Component {
         });
       }
     handleOk = () => {
-        API.saveNote(this.props.projectId, {content:[...this.state.commentInput]})
+        API.saveNote(this.props.projectId, {content:this.state.commentInput})
             .then(response => {
                 if(!response.data.errors){
                     this.setState({
