@@ -42,7 +42,7 @@ module.exports = {
         }).then(
             (dbProject) => {
                 if(dbProject) {
-                    res.json("liked project")
+                    res.json(dbProject)
                 } else {
                     res.json("project doesn't exist")
                 }
@@ -62,7 +62,7 @@ module.exports = {
         }).then(
             (dbProject) => {
                 if(dbProject) {
-                    res.json("unliked project")
+                    res.json(dbProject)
                 } else {
                     res.json("project doesn't exist")
                 }
@@ -81,7 +81,7 @@ module.exports = {
         }).then(
             (dbProject) => {
                 if(dbProject) {
-                    res.json("stared project")
+                    res.json(dbProject)
                 } else {
                     res.json("project doesn't exist")
                 }
@@ -101,7 +101,7 @@ module.exports = {
         }).then(
             (dbProject) => {
                 if(dbProject) {
-                    res.json("unstared project")
+                    res.json(dbProject)
                 } else {
                     res.json("project doesn't exist")
                 }

@@ -6,13 +6,14 @@ import API from "../../utils/API"
 import profile from "./images/quan.jpg"
 import scrollToComponent from 'react-scroll-to-component';
 import CommentBtn from "../CommentBtn";
+import LikeBtn from "../LikeBtn"
 
-// const IconText = ({ type, text }) => (
-//     <span>
-//       <Icon type={type} style={{ marginRight: 8 }} />
-//       {text}
-//     </span>
-//   );
+const IconText = ({ type, text }) => (
+    <span>
+      <Icon type={type} style={{ marginRight: 8 }} />
+      {text}
+    </span>
+  );
 
 let batch = 0;
 class LoadMoreList extends React.Component {
@@ -97,9 +98,9 @@ class LoadMoreList extends React.Component {
               description={item.description}
             />
             <div>
-                {/* <IconText type="star-o" text={item.stars} /> <Divider type="vertical"/>
-                <IconText type="like-o" text={item.likes} /> <Divider type="vertical"/> */}
-                {/* <IconText type="message" text={item.notes.length} /> */}
+                <IconText type="star-o" text={item.stars} /> <Divider type="vertical"/>
+                {/* <IconText type="like-o" text={item.likes} /> <Divider type="vertical"/> */}
+                <LikeBtn projectId={item._id}/> <Divider type="vertical"/>
                 <CommentBtn projectId={item._id}/>
             </div>
           </List.Item>
