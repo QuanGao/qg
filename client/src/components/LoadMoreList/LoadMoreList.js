@@ -6,7 +6,8 @@ import API from "../../utils/API"
 import profile from "./images/quan.jpg"
 import scrollToComponent from 'react-scroll-to-component';
 import CommentBtn from "../CommentBtn";
-import LikeBtn from "../LikeBtn"
+import LikeBtn from "../LikeBtn";
+import StarBtn from "../StarBtn";
 
 const IconText = ({ type, text }) => (
     <span>
@@ -98,8 +99,7 @@ class LoadMoreList extends React.Component {
               description={item.description}
             />
             <div>
-                <IconText type="star-o" text={item.stars} /> <Divider type="vertical"/>
-                {/* <IconText type="like-o" text={item.likes} /> <Divider type="vertical"/> */}
+                <StarBtn projectId={item._id}/> <Divider type="vertical"/>
                 <LikeBtn projectId={item._id}/> <Divider type="vertical"/>
                 <CommentBtn projectId={item._id}/>
             </div>

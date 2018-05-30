@@ -5,6 +5,8 @@ import API from "../../utils/API"
 import { List, Avatar, Icon } from 'antd';
 
 import CommentBtn from "../CommentBtn";
+import LikeBtn from "../LikeBtn";
+import StarBtn from "../StarBtn";
 
 const IconText = ({ type, text }) => (
   <span>
@@ -43,8 +45,9 @@ class FancyList extends React.Component{
             renderItem={item => (
                 <List.Item
                     key={item.title}
-                    actions={[<IconText type="star-o" text={item.stars} />, 
-                    <IconText type="like-o" text={item.likes}  />, 
+                    actions={[
+                    <StarBtn projectId={item._id}/>,
+                    <LikeBtn projectId={item._id}/>,
                     <CommentBtn projectId={item._id}/>,
                     <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
                     <a><Icon type="code-o"/></a>
