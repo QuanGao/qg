@@ -43,7 +43,7 @@ class SiderDemo extends React.Component {
     render() {
         return (
             <Layout style={{ minHeight: '100vh' }}>
-                <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>        
+                <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>         
                     <div className="logo">
                         {this.state.collapsed? (<h1>QG</h1>):(<h1>Quan Gao</h1>)}          
                     </div>
