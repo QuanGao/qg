@@ -16,27 +16,26 @@ const IconText = ({ type, text }) => (
     </span>
   );
 
-let batch = 0;
+// let batch = 0;
 class LoadMoreList extends React.Component {
     state = {
         loading: true,
-        loadingMore: false,
-        showLoadingMore: true,
         data: [],
-        dataToLoad: []
     }
 
     componentDidMount(){
         API.getSProjectData().then(        
             projectData=>{
-                this.setState({
-                    data: projectData.data,
-                    loading: false,
-                }, () => this.getDataToLoad(
-                    (res)=>this.setState({
-                        dataToLoad: res
+                const dataWithStatus =projectData.data.map(
+                    project => {
+                        project.like = false;
+                        return project
                     })
-                ))
+        
+                this.setState({
+                    data: dataWithStatus,
+                    loading: false
+                })
             }
         )
     }
@@ -45,62 +44,57 @@ class LoadMoreList extends React.Component {
         const data = [...this.state.data];
         this.setState({
             data: this.sortProjects(data,incremental)
-        },  () => this.getDataToLoad(
-            (res)=>this.setState({
-                dataToLoad: res
-            })
-        ))
+        })
     }
 
     sortProjects = (data, incremental) => {
         return data.sort((a,b) => {
-            const calPop = (project) => +project.likes + +project.stars + +project.notes.length;
+            // const calPop = (project) => +project.likes + +project.stars + +project.notes.length;
+            const calPop = (project) => +project.likes
             return incremental? calPop(a)-calPop(b):calPop(b)-calPop(a)
         });
     }
 
-    getDataToLoad = (callback) => {
-        batch++;
-        const res = this.state.data.slice(0, batch*5)
-        console.log(this.state.data)
-        const maxBatches = Math.ceil(this.state.data.length/5);
-        if(batch===maxBatches){
-            this.setState({
-                showLoadingMore:false
-            })
-        }
-        callback(res)
-  }
-
     scrollToTop = () => {
         window.scrollTo(0, 0)
     };
-    scrollToView = () => {
-        scrollToComponent(this.messagesEnd, { offset: 0, align: 'middle', duration: 500, ease:'inCirc'});
-    };
+    // scrollToView = () => {
+    //     scrollToComponent(this.messagesEnd, { offset: 0, align: 'middle', duration: 500, ease:'inCirc'});
+    // };
 
-    onLoadMore = () => {
-        this.setState({
-        loadingMore: true,
-        });
-        this.getDataToLoad((res) => {
-        this.setState({
-            dataToLoad: res,
-            loadingMore: false,
-        }, () => {
-            this.scrollToView();
-            window.dispatchEvent(new Event('resize'));
-        });
-        });
+    handleLikeBtn = (projectId) => {
+        const alldata = [...this.state.data]
+        const projectLiked = alldata.find(project => project._id === projectId)
+        if(projectLiked.like){
+            API.unlikeProject(projectId)
+            .then(response => {
+                const updatedProject = response.data;
+                updatedProject.like = false
+                const updatedData = alldata.map(project => {
+                    return project._id === projectId? updatedProject:project
+                })
+                this.setState({
+                    data: updatedData
+                })
+            })     
+     
+        }else {
+            API.likeProject(projectId)
+            .then(response => {
+                const updatedProject = response.data;
+                updatedProject.like = true
+                const updatedData = alldata.map(project => {
+                    return project._id === projectId? updatedProject:project
+                })
+                this.setState({
+                    data: updatedData
+                })
+            })
+        }     
+    
     }
   render() {
-    const { loading, loadingMore, showLoadingMore, dataToLoad} = this.state;
-    const loadMore = 
-      <div ref={(el) => { this.messagesEnd = el; }} style={{ textAlign: 'center', marginTop: 12, height: 32, lineHeight: '32px' }}>
-        {showLoadingMore ? (loadingMore ? <Spin />:
-        <Button onClick={this.onLoadMore}>load more</Button>):
-        (<Button onClick={this.scrollToTop}>back to top</Button>)}
-      </div>
+    const { loading,data} = this.state;
     return (
     <frag>
         <Button.Group size={2}>
@@ -112,8 +106,7 @@ class LoadMoreList extends React.Component {
         className="demo-loadmore-list"
         loading={loading}
         itemLayout="horizontal"
-        loadMore={loadMore}
-        dataSource={dataToLoad}
+        dataSource={data}
         renderItem={(item) => (
           <List.Item actions={[<a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
                                 <a href={item.codeLink}><Icon type="code-o"/></a>]}>
@@ -123,8 +116,10 @@ class LoadMoreList extends React.Component {
               description={item.description}
             />
             <div>
-                <StarBtn projectId={item._id}/> <Divider type="vertical"/>
-                <LikeBtn projectId={item._id}/> <Divider type="vertical"/>
+                <StarBtn projectId={item._id}/> 
+                <Divider type="vertical"/>
+                <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/> 
+                <Divider type="vertical"/>
                 <CommentBtn projectId={item._id}/>
             </div>
           </List.Item>
