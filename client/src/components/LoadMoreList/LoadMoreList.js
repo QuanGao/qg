@@ -26,7 +26,7 @@ class LoadMoreList extends React.Component {
     componentDidMount(){
         API.getSProjectData().then(        
             projectData=>{
-                const dataWithStatus =projectData.data.map(
+                const dataWithStatus = projectData.data.map(
                     project => {
                         project.like = false;
                         return project
@@ -43,24 +43,26 @@ class LoadMoreList extends React.Component {
     handleSort = (incremental) => {
         const data = [...this.state.data];
         this.setState({
-            data: this.sortProjects(data,incremental)
+            data: this.sortProjects(data, incremental, "stars")
         })
     }
 
-    sortProjects = (data, incremental) => {
+    sortProjects = (data, incremental, param) => {
         return data.sort((a,b) => {
-            // const calPop = (project) => +project.likes + +project.stars + +project.notes.length;
-            const calPop = (project) => +project.likes
+            const calPop = (project) => param === "notes"? project[param].length : +project[param]
             return incremental? calPop(a)-calPop(b):calPop(b)-calPop(a)
         });
     }
-
-    scrollToTop = () => {
-        window.scrollTo(0, 0)
-    };
-    // scrollToView = () => {
-    //     scrollToComponent(this.messagesEnd, { offset: 0, align: 'middle', duration: 500, ease:'inCirc'});
-    // };
+    updateStateAfterLikeStar = (alldata, projectId, response, action, condition) => {
+        const updatedProject = response.data;
+        updatedProject[action] = condition
+        const updatedData = alldata.map(project => {
+                return project._id === projectId? updatedProject:project
+        })
+        this.setState({
+            data: updatedData
+        })
+    };  
 
     handleLikeBtn = (projectId) => {
         const alldata = [...this.state.data]
@@ -68,30 +70,31 @@ class LoadMoreList extends React.Component {
         if(projectLiked.like){
             API.unlikeProject(projectId)
             .then(response => {
-                const updatedProject = response.data;
-                updatedProject.like = false
-                const updatedData = alldata.map(project => {
-                    return project._id === projectId? updatedProject:project
-                })
-                this.setState({
-                    data: updatedData
-                })
+               this.updateStateAfterLikeStar(alldata, projectId, response, "like", false) 
             })     
      
         }else {
             API.likeProject(projectId)
             .then(response => {
-                const updatedProject = response.data;
-                updatedProject.like = true
-                const updatedData = alldata.map(project => {
-                    return project._id === projectId? updatedProject:project
-                })
-                this.setState({
-                    data: updatedData
-                })
+                this.updateStateAfterLikeStar(alldata, projectId, response, "like", true) 
             })
-        }     
-    
+        }      
+    };
+    handleStarBtn = (projectId) => {
+        const alldata = [...this.state.data]
+        const projectStared = alldata.find(project => project._id === projectId)
+        if(projectStared.star){
+            API.unstarProject(projectId)
+            .then(response => {
+               this.updateStateAfterLikeStar(alldata, projectId, response, "star", false) 
+            })     
+     
+        }else {
+            API.starProject(projectId)
+            .then(response => {
+                this.updateStateAfterLikeStar(alldata, projectId, response, "star", true) 
+            })
+        }      
     }
   render() {
     const { loading,data} = this.state;
@@ -116,7 +119,7 @@ class LoadMoreList extends React.Component {
               description={item.description}
             />
             <div>
-                <StarBtn projectId={item._id}/> 
+                <StarBtn star={item.star} stars={item.stars} handleStarBtn={()=>this.handleStarBtn(item._id)}/>  
                 <Divider type="vertical"/>
                 <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/> 
                 <Divider type="vertical"/>
