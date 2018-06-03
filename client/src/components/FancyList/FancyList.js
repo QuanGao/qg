@@ -11,19 +11,86 @@ import FancyListFooter from "../FancyListFooter"
 
 class FancyList extends React.Component{
     state = {
-        listData:[]
+        data:[]
     }
 
     componentDidMount(){
         API.getTProjectData().then(        
             projectData=>{
                 this.setState({
-                    listData: projectData.data
+                    data: projectData.data
                 })
             }
         )
     }
-    
+    updateStateAfterLikeStar = (alldata, projectData, action, condition) => {
+        const updatedProject = {...projectData};
+        updatedProject[action] = condition;
+
+        condition? updatedProject[`${action}s`]++ : updatedProject[`${action}s`]--
+
+
+        const updatedData = alldata.map(project => {
+                return project._id === updatedProject._id? updatedProject:project
+        })
+        this.setState({
+            data: updatedData
+        }, ()=>console.log(this.state))
+    };  
+
+    handleLikeBtn = (projectId) => {
+        const alldata = [...this.state.data]
+        const projectLiked = alldata.find(project => project._id === projectId)
+        if(projectLiked.like){
+            API.unlikeProject(projectId)
+            .then(response => {
+            this.updateStateAfterLikeStar(alldata, projectLiked, "like", false) 
+            })     
+     
+        }else {
+            API.likeProject(projectId)
+            .then(response => {
+                this.updateStateAfterLikeStar(alldata, projectLiked, "like", true) 
+            })
+        }      
+    };
+    handleStarBtn = (projectId) => {
+        const alldata = [...this.state.data]
+        const projectStared = alldata.find(project => project._id === projectId)
+        if(projectStared.star){
+            API.unstarProject(projectId)
+            .then(response => {
+               this.updateStateAfterLikeStar(alldata, projectStared, "star", false) 
+            })     
+     
+        }else {
+            API.starProject(projectId)
+            .then(response => {
+                this.updateStateAfterLikeStar(alldata, projectStared, "star", true) 
+            })
+        }      
+    }
+    handleSaveComment = (projectId, content, cb) => {
+        API.saveNote(projectId, {content})
+            .then(response => {
+                if(!response.data.errors){
+                    const alldata = [...this.state.data]
+                    const updatedProject = response.data;            
+                    const updatedData = alldata.map(project => {                            
+                        if(project._id === updatedProject._id) {
+                            project.notes = updatedProject.notes;
+                        }
+                        return project
+                    })
+                    this.setState({
+                        data: updatedData
+                    }, cb)
+                }else{
+                    console.log(`save comment error message ${response.data.errors.content.message}`)
+                }
+            })
+        }
+
     render () {
         return (<List
             itemLayout="vertical"
@@ -34,7 +101,7 @@ class FancyList extends React.Component{
                 },
                 pageSize: 3,
             }}
-            dataSource={this.state.listData}
+            dataSource={this.state.data}
             footer = {<FancyListFooter/>}
             renderItem={(item,i) => (
                 <List.Item

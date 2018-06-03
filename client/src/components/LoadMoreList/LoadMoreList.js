@@ -99,8 +99,11 @@ class LoadMoreList extends React.Component {
                 if(!response.data.errors){
                     const alldata = [...this.state.data]
                     const updatedProject = response.data;            
-                    const updatedData = alldata.map(project => {
-                            return project._id === projectId? updatedProject:project
+                    const updatedData = alldata.map(project => {                            
+                        if(project._id === updatedProject._id) {
+                            project.notes = updatedProject.notes;
+                        }
+                        return project
                     })
                     this.setState({
                         data: updatedData
