@@ -23,8 +23,8 @@ class SortBtn extends React.Component {
                 </Select>
                 {' '}
                 <ButtonGroup>
-                    <Button onClick={() => this.props.handleSort(true, this.props.sortParam)} type="dashed" icon="up" />
-                    <Button onClick={() => this.props.handleSort(false, this.props.sortParam)} type="dashed" icon="down" />
+                    <Button onClick={() => this.props.handleSort(false, this.props.sortParam)} type="dashed" icon="up" />
+                    <Button onClick={() => this.props.handleSort(true, this.props.sortParam)} type="dashed" icon="down" />
                 </ButtonGroup>
           </div>
         );

@@ -9,13 +9,6 @@ import LikeBtn from "../LikeBtn";
 import StarBtn from "../StarBtn";
 import FancyListFooter from "../FancyListFooter"
 
-const IconText = ({ type, text }) => (
-  <span>
-    <Icon type={type} style={{ marginRight: 8 }} />
-    {text}
-  </span>
-);
-
 class FancyList extends React.Component{
     state = {
         listData:[]
@@ -48,9 +41,9 @@ class FancyList extends React.Component{
                     key={item.title}
                     id={`TProject${i}`}
                     actions={[
-                    <StarBtn projectId={item._id}/>,
-                    <LikeBtn projectId={item._id}/>,
-                    <CommentBtn projectId={item._id}/>,
+                    <StarBtn star={item.star} stars={item.stars} handleStarBtn={()=>this.handleStarBtn(item._id)}/>,
+                    <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/>,
+                    <CommentBtn projectId={item._id} data={item} handleSaveComment={this.handleSaveComment}/>,
                     <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
                     <a><Icon type="code-o"/></a>
                 ]}

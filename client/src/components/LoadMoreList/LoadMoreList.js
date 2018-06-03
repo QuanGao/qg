@@ -20,21 +20,14 @@ class LoadMoreList extends React.Component {
     componentDidMount(){
         API.getSProjectData().then(        
             projectData=>{
-                const dataWithStatus = projectData.data.map(
-                    project => {
-                        project.like = false;
-                        return project
-                    })
-        
                 this.setState({
-                    data: dataWithStatus,
+                    data: projectData.data,
                     loading: false
                 })
             }
         )
     }
     handleSortParamChange = (value) => {
-        console.log(`sortParam ${value}`);
         this.setState({
             sortParam: value
         })
@@ -53,15 +46,19 @@ class LoadMoreList extends React.Component {
             return incremental? calPop(a)-calPop(b):calPop(b)-calPop(a)
         });
     }
-    updateStateAfterLikeStar = (alldata, projectId, response, action, condition) => {
-        const updatedProject = response.data;
-        updatedProject[action] = condition
+    updateStateAfterLikeStar = (alldata, projectData, action, condition) => {
+        const updatedProject = {...projectData};
+        updatedProject[action] = condition;
+
+        condition? updatedProject[`${action}s`]++ : updatedProject[`${action}s`]--
+
+
         const updatedData = alldata.map(project => {
-                return project._id === projectId? updatedProject:project
+                return project._id === updatedProject._id? updatedProject:project
         })
         this.setState({
             data: updatedData
-        })
+        }, ()=>console.log(this.state))
     };  
 
     handleLikeBtn = (projectId) => {
@@ -70,13 +67,13 @@ class LoadMoreList extends React.Component {
         if(projectLiked.like){
             API.unlikeProject(projectId)
             .then(response => {
-               this.updateStateAfterLikeStar(alldata, projectId, response, "like", false) 
+            this.updateStateAfterLikeStar(alldata, projectLiked, "like", false) 
             })     
      
         }else {
             API.likeProject(projectId)
             .then(response => {
-                this.updateStateAfterLikeStar(alldata, projectId, response, "like", true) 
+                this.updateStateAfterLikeStar(alldata, projectLiked, "like", true) 
             })
         }      
     };
@@ -86,25 +83,39 @@ class LoadMoreList extends React.Component {
         if(projectStared.star){
             API.unstarProject(projectId)
             .then(response => {
-               this.updateStateAfterLikeStar(alldata, projectId, response, "star", false) 
+               this.updateStateAfterLikeStar(alldata, projectStared, "star", false) 
             })     
      
         }else {
             API.starProject(projectId)
             .then(response => {
-                this.updateStateAfterLikeStar(alldata, projectId, response, "star", true) 
+                this.updateStateAfterLikeStar(alldata, projectStared, "star", true) 
             })
         }      
     }
+    handleSaveComment = (projectId, content, cb) => {
+        API.saveNote(projectId, {content})
+            .then(response => {
+                if(!response.data.errors){
+                    const alldata = [...this.state.data]
+                    const updatedProject = response.data;            
+                    const updatedData = alldata.map(project => {
+                            return project._id === projectId? updatedProject:project
+                    })
+                    this.setState({
+                        data: updatedData
+                    }, cb)
+                }else{
+                    console.log(`save comment error message ${response.data.errors.content.message}`)
+                }
+            })
+        }
   render() {
     const { loading,data} = this.state;
     return (
     <frag>
-        <Button.Group size={12}>
-            {/* <span> Popularity </span> */}
+        <Button.Group size={12}>        
             <SortBtn handleSort={this.handleSort} sortParam={this.state.sortParam} handleSortParamChange={this.handleSortParamChange}/>
-            {/* <Button onClick={()=>this.handleSort(false)} type="dashed" icon="up" value="small"/>
-            <Button onClick={()=>this.handleSort(true)} type="dashed" icon="down" value="small"/> */}
         </Button.Group>
       <List
         className="demo-loadmore-list"
@@ -124,7 +135,7 @@ class LoadMoreList extends React.Component {
                 <Divider type="vertical"/>
                 <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/> 
                 <Divider type="vertical"/>
-                <CommentBtn projectId={item._id}/>
+                <CommentBtn projectId={item._id} data={item} handleSaveComment={this.handleSaveComment}/>
             </div>
           </List.Item>
         )}
@@ -135,5 +146,3 @@ class LoadMoreList extends React.Component {
 }
 
 export default LoadMoreList;
-
-                      
