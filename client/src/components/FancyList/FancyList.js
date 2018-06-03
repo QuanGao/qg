@@ -35,7 +35,7 @@ class FancyList extends React.Component{
         })
         this.setState({
             data: updatedData
-        }, ()=>console.log(this.state))
+        })
     };  
 
     handleLikeBtn = (projectId) => {

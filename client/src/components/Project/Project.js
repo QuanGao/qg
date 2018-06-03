@@ -3,7 +3,7 @@ import MyFooter from "../MyFooter"
 import { Layout} from 'antd';
 import "./Project.css";
 
-import LoadMoreList from "../LoadMoreList";
+import ProjectList from "../ProjectList";
 import FancyList from "../FancyList";
 
 const { Header, Content} = Layout;
@@ -13,7 +13,7 @@ class Project extends React.Component {
     }
 
     renderProjectContent = (projectType) => {
-        return projectType==="3"? <LoadMoreList/>:<FancyList/>
+        return projectType==="3"? <ProjectList/>:<FancyList/>
             
     }
     renderProjectHeader = (projectType) => {

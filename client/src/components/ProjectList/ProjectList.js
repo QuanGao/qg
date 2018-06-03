@@ -1,6 +1,6 @@
 import React from 'react'
-import { List, Avatar, Button, Spin, Icon, Divider} from 'antd';
-import "./LoadMoreList.css"
+import { List, Avatar, Button, Spin, Icon, Divider, BackTop} from 'antd';
+import "./ProjectList.css"
 import axios from 'axios';
 import API from "../../utils/API"
 import profile from "./images/quan.jpg"
@@ -10,7 +10,7 @@ import LikeBtn from "../LikeBtn";
 import StarBtn from "../StarBtn";
 import SortBtn from "../SortBtn";
 
-class LoadMoreList extends React.Component {
+class ProjectList extends React.Component {
     state = {
         loading: true,
         data: [],
@@ -116,7 +116,7 @@ class LoadMoreList extends React.Component {
   render() {
     const { loading,data} = this.state;
     return (
-    <frag>
+    <div>
         <Button.Group size={12}>        
             <SortBtn handleSort={this.handleSort} sortParam={this.state.sortParam} handleSortParamChange={this.handleSortParamChange}/>
         </Button.Group>
@@ -143,9 +143,10 @@ class LoadMoreList extends React.Component {
           </List.Item>
         )}
       />
-    </frag>
+      <BackTop />    
+    </div>
     );
   }
 }
 
-export default LoadMoreList;
+export default ProjectList;

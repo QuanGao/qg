@@ -13,3 +13,11 @@
 .anticon-like, .anticon-like-o {
     color: #2793ff;
 }
+
+.sortBtnDiv {
+    margin-bottom: 20px;
+}
+
+.sortByText {
+    margin-right: 5px;  
+}
