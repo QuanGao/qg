@@ -8,19 +8,13 @@ import scrollToComponent from 'react-scroll-to-component';
 import CommentBtn from "../CommentBtn";
 import LikeBtn from "../LikeBtn";
 import StarBtn from "../StarBtn";
+import SortBtn from "../SortBtn";
 
-const IconText = ({ type, text }) => (
-    <span>
-      <Icon type={type} style={{ marginRight: 8 }} />
-      {text}
-    </span>
-  );
-
-// let batch = 0;
 class LoadMoreList extends React.Component {
     state = {
         loading: true,
         data: [],
+        sortParam: ""
     }
 
     componentDidMount(){
@@ -39,11 +33,17 @@ class LoadMoreList extends React.Component {
             }
         )
     }
+    handleSortParamChange = (value) => {
+        console.log(`sortParam ${value}`);
+        this.setState({
+            sortParam: value
+        })
+    };
 
-    handleSort = (incremental) => {
+    handleSort = (incremental, param) => {
         const data = [...this.state.data];
         this.setState({
-            data: this.sortProjects(data, incremental, "stars")
+            data: this.sortProjects(data, incremental, param)
         })
     }
 
@@ -100,10 +100,11 @@ class LoadMoreList extends React.Component {
     const { loading,data} = this.state;
     return (
     <frag>
-        <Button.Group size={2}>
-            <span> Popularity </span>
-            <Button onClick={()=>this.handleSort(false)} type="dashed" icon="up" value="small"/>
-            <Button onClick={()=>this.handleSort(true)} type="dashed" icon="down" value="small"/>
+        <Button.Group size={12}>
+            {/* <span> Popularity </span> */}
+            <SortBtn handleSort={this.handleSort} sortParam={this.state.sortParam} handleSortParamChange={this.handleSortParamChange}/>
+            {/* <Button onClick={()=>this.handleSort(false)} type="dashed" icon="up" value="small"/>
+            <Button onClick={()=>this.handleSort(true)} type="dashed" icon="down" value="small"/> */}
         </Button.Group>
       <List
         className="demo-loadmore-list"

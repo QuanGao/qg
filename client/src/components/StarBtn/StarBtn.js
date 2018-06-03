@@ -1,8 +1,6 @@
 import React from 'react'
 import {Button, Icon} from 'antd';
 import "./StarBtn.css";
-import API from "../../utils/API"
-import SimpleList from "../SimpleList"
 
 class StarBtn extends React.Component { 
     render() {

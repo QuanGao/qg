@@ -1,0 +1,15 @@
+.ant-modal-title {
+    font-style: italic
+}
+
+.ant-modal-body textarea {
+    margin-bottom: 20px;
+}
+
+.anticon-star, .anticon-star-o {
+    color: #ffcc00;
+}
+
+.anticon-like, .anticon-like-o {
+    color: #2793ff;
+}

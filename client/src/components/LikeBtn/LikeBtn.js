@@ -1,8 +1,6 @@
 import React from 'react'
 import {Button, Icon} from 'antd';
 import "./LikeBtn.css";
-import API from "../../utils/API"
-import SimpleList from "../SimpleList"
 
 class LikeBtn extends React.Component { 
     render() {
