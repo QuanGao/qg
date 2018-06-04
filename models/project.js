@@ -8,9 +8,9 @@ const ProjectSchema = new Schema ({
         trim: true,
         requied: [true,"project title required"]
     },
-    // timeBuilt: {
-    //     type: String,
-    // },
+    date: {
+        type: Date
+    },
     codeLink: {
         type: String
     },

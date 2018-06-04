@@ -25,7 +25,7 @@ module.exports = {
     },
 
     add: (req, res) => {
-        db.Project.create(req.body).then(
+        db.Project.insertMany(req.body).then(
             dbProject => res.json(dbProject)
         ).catch(err => res.json(err))
     },

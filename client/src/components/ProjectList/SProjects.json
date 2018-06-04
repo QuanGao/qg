@@ -1,170 +1,191 @@
-[{
-        "title": "MassEffect_CrewAssembly",
-        "codeLink": "https://github.com/QuanGao/MassEffect_CrewAssembly",
-        "pageLink": "https://mass-effect-homework.herokuapp.com/",
-        "description": "A MASS EFFECT themed memory game built with react",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
+[
+{
+    "keywords" : [ 
+        "Firebase", 
+        "jQuery"
+    ],
+    "title" : "Rock Paper Scissor",
+    "codeLink" : "https://github.com/QuanGao/RPS-Multiplayer",
+    "pageLink" : "https://quangao.github.io/RPS-Multiplayer/",
+    "description" : "Play RPS game and chat with your friends online",
+    "likes" : 15,
+    "stars" : 15,
+    "category" : "solo"  
+},
+{
+    "keywords" : [ 
+        "Node", 
+        "API"
+    ],
+    "title" : "Liri Node Assistant",
+    "codeLink" : "https://github.com/QuanGao/liri-node-app",
+    "description" : "CLI node app that provides you with info on movie, music, and latest tweets",
+    "likes" : 3,
+    "stars" : 3,
+    "category" : "solo"  
+},
+{  
+    "keywords" : [ 
+        "React"
+    ],
+    "title" : "Mass Effect Crew Assembly",
+    "codeLink" : "https://github.com/QuanGao/MassEffect_CrewAssembly",
+    "pageLink" : "https://mass-effect-homework.herokuapp.com/",
+    "description" : "Challenge yourself with this MASS EFFECT themed memory game",
+    "likes" : 20,
+    "stars" : 20,
+    "category" : "solo"
+},
+{ 
 
-    },
-    {
-        "title": "Rock-Paper-Scissor",
-        "codeLink": "https://github.com/QuanGao/RPS-Multiplayer",
-        "pageLink": "https://quangao.github.io/RPS-Multiplayer/",
-        "description": "A two player rock paper scissor game powered by Firebase!",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
-
-    }, {
-        "title": "TimeToGetGIPHY",
-        "codeLink": "https://github.com/QuanGao/TimeToGetGIPHY",
-        "pageLink": "https://quangao.github.io/TimeToGetGIPHY/",
-        "description": "Disney princess themed gif generatopr with GIPHY API",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
-
-    }, {
-        "title": "Star Wars RPG",
-        "codeLink": "https://github.com/QuanGao/Star-Wars-Game",
-        "pageLink": "https://quangao.github.io/Star-Wars-Game/",
-        "description": "Star wars themed turn based battle game",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
-
-    }, {
-        "title": "Hangman-Game",
-        "codeLink": "https://github.com/QuanGao/Hangman-Game",
-        "pageLink": "https://quangao.github.io/Hangman-Game/",
-        "description": "Superhero themed hangman game",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
-
-    }, {
-        "title": "Supernatural Trivia Game",
-        "codeLink": "https://github.com/QuanGao/TriviaGame",
-        "pageLink": "https://quangao.github.io/TriviaGame/",
-        "description": "Trivia game based on TV shown SUPERNATURAL. Expect great gifs!",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
-
-    }, {
-        "title": "News Scraper",
-        "codeLink": "https://github.com/QuanGao/MongoScraper",
-        "pageLink": "https://arcane-everglades-10622.herokuapp.com/",
-        "description": "Fresh News Scraping site lets you browse/save/comment newest gaming news!",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
-
-    }, {
-        "title": "Who is da burger king?",
-        "codeLink": "https://github.com/QuanGao/sequelizedBurger",
-        "pageLink": "https://mighty-fortress-87600.herokuapp.com/index",
-        "description": "Burger logger with MySQL,Node,Express,Handlebars and sequelize library",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
-
-    }, {
-        "title": "Burger Addiction",
-        "codeLink": "https://github.com/QuanGao/Burger",
-        "pageLink": "https://fathomless-reef-79424.herokuapp.com/index",
-        "description": "Burger logger with MySQL,Node,Express,Handlebars and a homemade ORM",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
-
-    }, {
-        "title": "Friend Finder",
-        "codeLink": "https://github.com/QuanGao/FriendFinder",
-        "pageLink": "https://vast-scrubland-28230.herokuapp.com/",
-        "description": "An express app that matches users with the highest compatibility based on a short survey.",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
-
-    }, {
-        "title": "Bamazon",
-        "codeLink": "https://github.com/QuanGao/bamazon",
-        "description": "An Amazon-like storefront CLI written in Node.js",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
-
-    }, {
-        "title": "Constructor-Hangman",
-        "codeLink": "https://github.com/QuanGao/Constructor-Hangman",
-        "description": "A command line based node hangman game",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
-
-    }, {
-        "title": "Quan Gao's Portforlio Page",
-        "codeLink": "https://github.com/QuanGao/portfolio",
-        "pageLink": "https://quangao.github.io/portfolio/",
-        "description": "Use HTML, CSS, and Bootstrap to build responsive website to showcase my projects.",
-        "likes": 0,
-        "stars": 0,
-        "notes": [],
-        "category": "solo",
-        "imgSrc": "image source for solo projects",
-        "keywords": ["javascript", "html"],
-        "content": "whatevercontent"
-
-    }
+    "keywords" : [ 
+        "API", 
+        "jQuery"
+    ],
+    "title" : "Time To Get GIPHY",
+    "codeLink" : "https://github.com/QuanGao/TimeToGetGIPHY",
+    "pageLink" : "https://quangao.github.io/TimeToGetGIPHY/",
+    "description" : "Get awesome gifs of Disney princesses or just about anything",
+    "likes" : 5,
+    "stars" : 5,
+    "category" : "solo"
+},
+{    
+    "keywords" : [ 
+        "jQuery",
+        "HTML",
+        "CSS"
+    ],
+    "title" : "Star Wars RPG",
+    "codeLink" : "https://github.com/QuanGao/Star-Wars-Game",
+    "pageLink" : "https://quangao.github.io/Star-Wars-Game/",
+    "description" : "Star wars themed turn based battle game",
+    "likes" : 10,
+    "stars" : 10,
+    "category" : "solo"},
+    
+{    
+    "keywords" : [ 
+        "Javascript",
+        "HTML",
+        "CSS"
+    ],
+    "title" : "Superhero Hangman",
+    "codeLink" : "https://github.com/QuanGao/Hangman-Game",
+    "pageLink" : "https://quangao.github.io/Hangman-Game/",
+    "description" : "How many superheroes do you know?",
+    "likes" : 8,
+    "stars" : 8,
+    "category" : "solo"
+},
+{   
+    "keywords" : [ 
+        "jQuery", 
+        "HTML",
+        "CSS"
+    ],
+    "title" : "Supernatural Trivia",
+    "codeLink" : "https://github.com/QuanGao/TriviaGame",
+    "pageLink" : "https://quangao.github.io/TriviaGame/",
+    "description" : "Trivia game based on TV show SUPERNATURAL. Expect great gifs!",
+    "likes" : 9,
+    "stars" : 9,
+    "category" : "solo"    
+},
+{    
+    "keywords" : [ 
+        "MongoDB", 
+        "Node",
+        "Express",
+        "Cheerio"
+    ],
+    "title" : "Gaming News Scraper",
+    "codeLink" : "https://github.com/QuanGao/MongoScraper",
+    "pageLink" : "https://arcane-everglades-10622.herokuapp.com/",
+    "description" : "Fresh News Scraping site lets you browse/save/comment newest gaming news!",
+    "likes" : 15,
+    "stars" : 15,
+    "category" : "solo"
+},
+{    
+    "keywords" : [ 
+        "Node", 
+        "MySQL",
+        "Express",
+        "Handlebars"
+    ],
+    "title" : "Burger Addiction",
+    "codeLink" : "https://github.com/QuanGao/Burger",
+    "pageLink" : "https://fathomless-reef-79424.herokuapp.com/index",
+    "description" : "Keep track of your burger eating habits here. Featuring a homemade ORM for MySQL",
+    "likes" : 5,
+    "stars" : 5,
+    "category" : "solo"
+},
+{    
+    "keywords" : [ 
+        "Node", 
+        "Sequelize",
+        "Express",
+        "Handlebars"
+    ],
+    "title" : "Who is da burger king?",
+    "codeLink" : "https://github.com/QuanGao/sequelizedBurger",
+    "pageLink" : "https://mighty-fortress-87600.herokuapp.com/index",
+    "description" : "Take your burger consumption to the next level and compete for the titel of burger king",
+    "likes" : 11,
+    "stars" : 11,
+    "category" : "solo"
+},
+{    
+    "keywords" : [ 
+        "Express"
+    ],
+    "title" : "Friend Finder",
+    "codeLink" : "https://github.com/QuanGao/FriendFinder",
+    "pageLink" : "https://vast-scrubland-28230.herokuapp.com/",
+    "description" : "An express app that matches users with the highest compatibility based on a short survey.",
+    "likes" : 5,
+    "stars" : 5,
+    "category" : "solo"
+},
+{    
+    "keywords" : [ 
+        "Node", 
+        "MySQL",
+        "Javascript"
+    ],
+    "title" : "Bamazon",
+    "codeLink" : "https://github.com/QuanGao/bamazon",
+    "description" : "A business managment CLI that can act both as storefront and as store manager",
+    "likes" : 9,
+    "stars" : 9,
+    "category" : "solo"
+},
+{     
+    "keywords" : [ 
+        "Javascript", 
+        "Constructor"
+    ],
+    "title" : "Constructor Hangman",
+    "codeLink" : "https://github.com/QuanGao/Constructor-Hangman",
+    "description" : "A command line based node hangman game",
+    "likes" : 5,
+    "stars" : 5,
+    "category" : "solo"
+},
+{    
+    "keywords" : [ 
+        "Bootstrap", 
+        "HTML",
+        "CSS"
+    ],
+    "title" : "Portforlio version 1.0",
+    "codeLink" : "https://github.com/QuanGao/portfolio",
+    "pageLink" : "https://quangao.github.io/portfolio/",
+    "description" : "My first portolio site with responsive design",
+    "likes" : 4,
+    "stars" : 4,
+    "category" : "solo"
+}
 ]

@@ -20,8 +20,9 @@ class ProjectList extends React.Component {
     componentDidMount(){
         API.getSProjectData().then(        
             projectData=>{
+                const dataSortByDate = this.sortProjects([...projectData.data], false, "date")
                 this.setState({
-                    data: projectData.data,
+                    data: dataSortByDate,
                     loading: false
                 })
             }
@@ -41,8 +42,18 @@ class ProjectList extends React.Component {
     }
 
     sortProjects = (data, incremental, param) => {
-        return data.sort((a,b) => {
-            const calPop = (project) => param === "notes"? project[param].length : +project[param]
+        return data.sort((a,b) => {        
+            const calPop = (project) => {
+    
+                switch(param){
+                    case "notes":
+                        return project[param].length;
+                    case "date":
+                        return new Date (project[param]);
+                    default:
+                        return +project[param]
+                }
+            }
             return incremental? calPop(a)-calPop(b):calPop(b)-calPop(a)
         });
     }
@@ -58,7 +69,7 @@ class ProjectList extends React.Component {
         })
         this.setState({
             data: updatedData
-        }, ()=>console.log(this.state))
+        })
     };  
 
     handleLikeBtn = (projectId) => {
@@ -131,7 +142,7 @@ class ProjectList extends React.Component {
             <List.Item.Meta
               avatar={<Avatar src={profile} />}            
               title={<a href={item.pageLink ||item.codeLink }>{item.title}</a>}
-              description={item.description}
+              description={`${item.date.split("T")[0]} ${item.description}`}
             />
             <div>
                 <StarBtn star={item.star} stars={item.stars} handleStarBtn={()=>this.handleStarBtn(item._id)}/>  

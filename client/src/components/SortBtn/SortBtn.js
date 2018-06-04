@@ -10,11 +10,12 @@ class SortBtn extends React.Component {
         return (
             <div className="sortBtnDiv">
                 <b className="sortByText"> Sort by </b> 
-                <Select defaultValue="date" style={{ width: 110, marginRight:5 }} onChange={this.props.handleSortParamChange}>
+                {/* <Select defaultValue="date" style={{ width: 110, marginRight:5 }} onChange={this.props.handleSortParamChange}> */}
+                <Select style={{ width: 110, marginRight:5 }} onChange={this.props.handleSortParamChange}>    
                     <Option value="likes">like</Option>
                     <Option value="stars">star</Option>
                     <Option value="notes">comment</Option>
-                    <Option value="builtDate">date</Option>
+                    <Option value="date">date</Option>
                 </Select>
                {' '}
                 <ButtonGroup>

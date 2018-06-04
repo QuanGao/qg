@@ -119,7 +119,7 @@ class FancyList extends React.Component{
                     <List.Item.Meta
                         avatar={<Avatar src={item.avatar} />}
                         title={<a href={item.pageLink}>{item.title}</a>}
-                        description={item.description}
+                        description={`${item.date.split("T")[0]} | ${item.description}`}
                     />
                     {item.content}
             </List.Item>

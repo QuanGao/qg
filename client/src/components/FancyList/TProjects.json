@@ -1,42 +1,52 @@
 [{
-        "title": "RoomieU",
-        "codeLink": "https://github.com/QuanGao/roomieU",
-        "pageLink": "https://roomieu.herokuapp.com/",
-        "description": "A site for university students to find their ideal roommate.",
-        "likes": 0,
-        "stars": 0,
-        "imgSrc": "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1500660066/travel-hacks-opener-TRAVELHACK0717.jpg?itok=HgP9J2B_",
-        "content": "We matched you with potential roommates from same univeristy based on expectations on rent, distance from campus, and personality compatibility",
-        "notes": [],
-        "category": "team",
-        "keywords": []
-
-    },
-    {
-        "title": "GetAway",
-        "codeLink": "https://github.com/QuanGao/GetawayPlan",
-        "pageLink": "https://quiet-waters-49992.herokuapp.com/",
-        "description": "Travel planner that minimize planning and maximizes fun for your next trip",
-        "likes": 0,
-        "stars": 0,
-        "imgSrc": "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1500660066/travel-hacks-opener-TRAVELHACK0717.jpg?itok=HgP9J2B_",
-        "content": "You LOVE to travel….but HATE all the planning that comes along with it? Planning out your days on where to go / what to eat, can not only be time consuming, but frustrating when you don't know your options.",
-        "notes": [],
-        "category": "team",
-        "keywords": []
-
-    }, {
-        "title": "Dinner Savior",
-        "codeLink": "https://github.com/QuanGao/dinner-savior",
-        "pageLink": "https://quangao.github.io/dinner-savior/",
-        "description": "Firebase powered web app that provides wait time at popular restaurants in real time",
-        "likes": 0,
-        "stars": 0,
-        "imgSrc": "http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1500660066/travel-hacks-opener-TRAVELHACK0717.jpg?itok=HgP9J2B_",
-        "content": "A firebase powered web application that allows users report/access wait time at a restaurant in real time. If you decide it is not worth the wait, we offer you three hand picked recipes to cook at home according to the types of restaurants you searched for.",
-        "notes": [],
-        "category": "team",
-        "keywords": []
-
-    }
+    "title" : "RoomieU",
+    "codeLink" : "https://github.com/QuanGao/roomieU",
+    "pageLink" : "https://roomieu.herokuapp.com/",
+    "description" : "A site for university students to find their ideal roommate.",
+    "likes" : 20,
+    "stars" : 20,
+    "imgSrc" : "https://studybreaks.com/wp-content/uploads/2017/08/Roomie-portada.jpg",
+    "content" : "We matched you with potential roommates from same univeristy based on expectations on rent, distance from campus, and personality compatibility",
+    "keywords" : [ 
+        "React",
+        "MongoDB",
+        "Node",
+        "Express"
+    ],
+    "category" : "team"
+},
+{
+    "title" : "GetAwayPlan",
+    "codeLink" : "https://github.com/QuanGao/GetawayPlan",
+    "pageLink" : "https://quiet-waters-49992.herokuapp.com/",
+    "description" : "Travel planner that minimize planning and maximizes fun for your next trip",
+    "likes" : 15,
+    "stars" : 15,
+    "imgSrc" : "http://blog.splender.com/wp-content/uploads/2016/01/winter-vacation-getaway.jpg",
+    "content" : "You LOVE to travel….but HATE all the planning that comes along with it? Planning out your days on where to go / what to eat, can not only be time consuming, but frustrating when you don't know your options.",
+    "keywords" : [ 
+        "Handlebars", 
+        "Sequelize",
+        "Node",
+        "Express"
+    ],
+    "category" : "team"
+},
+{
+    "title" : "Dinner Savior",
+    "codeLink" : "https://github.com/QuanGao/dinner-savior",
+    "pageLink" : "https://quangao.github.io/dinner-savior/",
+    "description" : "Firebase powered web app that provides wait time at popular restaurants in real time",
+    "likes" : 10,
+    "stars" : 10,
+    "imgSrc" : "http://medias.photodeck.com/2732a45b-6310-4d55-8f76-b3c17d73efb7/24AI0416-19_xlarge.jpg",
+    "content" : "A firebase powered web application that allows users report/access wait time at a restaurant in real time. If you decide it is not worth the wait, we offer you three hand picked recipes to cook at home according to the types of restaurants you searched for.",
+    "category" : "team",
+    "keywords" : [ 
+        "Firebase", 
+        "AP",
+        "Bootstrap",
+        "jQuery"
+    ]
+}
 ]
