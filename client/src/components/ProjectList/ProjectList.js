@@ -1,5 +1,5 @@
 import React from 'react'
-import { List, Avatar, Button, Spin, Icon, Divider, BackTop} from 'antd';
+import { List, Avatar, Button, Spin, Icon, Divider, BackTop, Tag} from 'antd';
 import "./ProjectList.css"
 import axios from 'axios';
 import API from "../../utils/API"
@@ -10,6 +10,26 @@ import LikeBtn from "../LikeBtn";
 import StarBtn from "../StarBtn";
 import SortBtn from "../SortBtn";
 
+const tags = {
+    React: "#f50",
+    jQuery: "#f50",
+    Javascript: "#f50",
+    Handlebars: "#f50",
+
+    HTML:"#2db7f5",
+    CSS: "#2db7f5",
+    Bootstrap: "#2db7f5",
+
+    Firebase: "#87d068",
+    MongoDB: "#87d068",
+    MySQL: "#87d068",
+    Sequelize: "#87d068", 
+
+    Express: "#108ee9",
+    Node:"#108ee9",   
+    API:"#108ee9",
+    Cheerio:"#108ee9"
+}
 class ProjectList extends React.Component {
     state = {
         loading: true,
@@ -134,23 +154,34 @@ class ProjectList extends React.Component {
       <List
         className="demo-loadmore-list"
         loading={loading}
-        itemLayout="horizontal"
+        // itemLayout="horizontal"
+        itemLayout="vertical"
         dataSource={data}
         renderItem={(item) => (
-          <List.Item actions={[<a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
-                                <a href={item.codeLink}><Icon type="code-o"/></a>]}>
+          <List.Item actions={[
+                                <StarBtn star={item.star} stars={item.stars} handleStarBtn={()=>this.handleStarBtn(item._id)}/>,
+                                <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/>,
+                                <CommentBtn projectId={item._id} data={item} handleSaveComment={this.handleSaveComment}/>,
+                                <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
+                                <a href={item.codeLink}><Icon type="code-o"/></a>                   
+                            ]}
+                    extra={<span>{item.keywords.map(word => <Tag color={tags[word]}>{word}</Tag>)}</span>}                                
+            >            
+            
             <List.Item.Meta
               avatar={<Avatar src={profile} />}            
               title={<a href={item.pageLink ||item.codeLink }>{item.title}</a>}
-              description={`${item.date.split("T")[0]} ${item.description}`}
+              description={`${item.date.split("T")[0]} | ${item.description}`}
             />
-            <div>
+            
+            {/* <div>
                 <StarBtn star={item.star} stars={item.stars} handleStarBtn={()=>this.handleStarBtn(item._id)}/>  
                 <Divider type="vertical"/>
                 <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/> 
                 <Divider type="vertical"/>
                 <CommentBtn projectId={item._id} data={item} handleSaveComment={this.handleSaveComment}/>
-            </div>
+            </div> */}
+            
           </List.Item>
         )}
       />

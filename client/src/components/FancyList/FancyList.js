@@ -3,7 +3,6 @@ import { Layout } from 'antd';
 import "./FancyList.css";
 import API from "../../utils/API"
 import { List, Avatar, Icon } from 'antd';
-
 import CommentBtn from "../CommentBtn";
 import LikeBtn from "../LikeBtn";
 import StarBtn from "../StarBtn";
@@ -121,7 +120,7 @@ class FancyList extends React.Component{
                         title={<a href={item.pageLink}>{item.title}</a>}
                         description={`${item.date.split("T")[0]} | ${item.description}`}
                     />
-                    {item.content}
+                    {item.content}  
             </List.Item>
             )}
         />
