@@ -111,7 +111,7 @@ class FancyList extends React.Component{
                     <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/>,
                     <CommentBtn projectId={item._id} data={item} handleSaveComment={this.handleSaveComment}/>,
                     <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
-                    <a><Icon type="code-o"/></a>
+                    <a href={item.codeLink}><Icon type="code-o"/></a>
                 ]}
             extra={<a href={item.pageLink}><img width={272} alt="logo" src={item.imgSrc}/></a>}
                 >

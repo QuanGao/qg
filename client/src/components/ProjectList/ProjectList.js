@@ -15,7 +15,7 @@ const tags = {
     jQuery: "#f50",
     Javascript: "#f50",
     Handlebars: "#f50",
-
+    
     HTML:"#2db7f5",
     CSS: "#2db7f5",
     Bootstrap: "#2db7f5",
