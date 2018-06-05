@@ -2,11 +2,14 @@ import React from 'react'
 import { Layout } from 'antd';
 import "./FancyList.css";
 import API from "../../utils/API"
-import { List, Avatar, Icon } from 'antd';
+import { List, Avatar, Icon, Tag } from 'antd';
 import CommentBtn from "../CommentBtn";
 import LikeBtn from "../LikeBtn";
 import StarBtn from "../StarBtn";
 import FancyListFooter from "../FancyListFooter"
+
+const colors = ["#87d068", "#f50", "#108ee9"]
+
 
 class FancyList extends React.Component{
     state = {
@@ -98,7 +101,7 @@ class FancyList extends React.Component{
                 onChange: (page) => {
                     console.log(page);
                 },
-                pageSize: 3,
+                pageSize: 1,
             }}
             dataSource={this.state.data}
             footer = {<FancyListFooter/>}
@@ -120,7 +123,8 @@ class FancyList extends React.Component{
                         title={<a href={item.pageLink}>{item.title}</a>}
                         description={`${item.date.split("T")[0]} | ${item.description}`}
                     />
-                    {item.content}  
+                    {item.content}
+                    {<div>{item.keywords.map(word => <Tag>{word}</Tag>)}</div>}    
             </List.Item>
             )}
         />

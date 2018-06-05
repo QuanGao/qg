@@ -12,9 +12,9 @@
     "pageLink" : "https://roomieu.herokuapp.com/",
     "description" : "A site for university students to find their ideal roommate.",
     "likes" : 20,
-    "stars" : 20,
+    "stars" : 25,
     "imgSrc" : "https://studybreaks.com/wp-content/uploads/2017/08/Roomie-portada.jpg",
-    "content" : "We matched you with potential roommates from same univeristy based on expectations on rent, distance from campus, and personality compatibility",
+    "content" : "Having a good roommates comes with a lot of perks while having a bad one can make your life living hell. To avoid the frustration and prevent the heartbreak, let RoomieU help you matched with potential roommates from same univeristy based on rental price, distance from campus, and personality/habit compatibility. When you get matched, we send you a text notification so that you don't miss out on a great roomie. Our app is especially popular at the University of Chicago right now. Come check out some great roomies!",
     "category" : "team"
     
 },
@@ -31,9 +31,9 @@
     "pageLink" : "https://quiet-waters-49992.herokuapp.com/",
     "description" : "Travel planner that minimize planning and maximizes fun for your next trip",
     "likes" : 15,
-    "stars" : 15,
+    "stars" : 20,
     "imgSrc" : "http://blog.splender.com/wp-content/uploads/2016/01/winter-vacation-getaway.jpg",
-    "content" : "You LOVE to travel….but HATE all the planning that comes along with it? Planning out your days on where to go / what to eat, can not only be time consuming, but frustrating when you don't know your options.",
+    "content" : "You LOVE to travel….but HATE all the planning that comes along with it? Planning out your days on where to go / what to eat, can not only be time consuming, but frustrating when you don't know your options. GetAway plan does all the hard work for you by providing you info on weather, food, and activities at your destination. Save everything at one place and never miss out",
     "category" : "team"
     
 },
@@ -52,9 +52,8 @@
     "likes" : 10,
     "stars" : 10,
     "imgSrc" : "http://medias.photodeck.com/2732a45b-6310-4d55-8f76-b3c17d73efb7/24AI0416-19_xlarge.jpg",
-    "content" : "Wouldn't it be great if there's an app to inform you how long it's gonna take to get that burger at Au cheval beforehand? Our community powered app does just that! You can easily find out the lastest wait time at popular restaurants with the click of a button (or two) in the comfort of home. To give back, report your wait time when you get stuck in a long wait. If you decide it is not worth the wait, we offer you hand picked recipes to cook at home based on the cuisine type of the restaurant you searched for.",
-    "category" : "team"
-    
+    "content" : "Wouldn't it be great if you are able to find out how long it's gonna take to get that burger at Au Cheval before getting stuck in a three hour wait? Our community powered app does just that! You can easily search for the lastest wait time at popular restaurants in the comfort of home. You may also report your wait time at restaurants. If you decide it is not worth the wait, we offer you hand picked recipes to cook at home",
+    "category" : "team"  
 },
 {
     "keywords" : [ 
