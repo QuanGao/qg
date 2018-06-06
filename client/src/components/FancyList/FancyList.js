@@ -8,8 +8,25 @@ import LikeBtn from "../LikeBtn";
 import StarBtn from "../StarBtn";
 import FancyListFooter from "../FancyListFooter"
 
-const colors = ["#87d068", "#f50", "#108ee9"]
+import Firebase from "./images/firebase.png"
+import Handlebars from "./images/handlebars.png"
+import Twilio from "./images/twilio.png"
+import Reactstrap from "./images/reactstrap.png"
+import Passport from "./images/passport.png"
 
+import react from "./images/react.png"
+import MongoDB from "./images/mongodb.png"
+import Node from "./images/node.png"
+import Express from "./images/express.png"
+import Sequelize from "./images/sequelize.png"
+import jQuery from "./images/jQuery.png"
+import CSS from "./images/CSS.png"
+import Bootstrap from "./images/bootstrap.png"
+import HTML from "./images/HTML.png";
+import htmlcss from "./images/htmlcss.png"
+import api from "./images/api.jpg";
+import Heroku from "./images/heroku.png"
+const pngs = {API:api, React:react, Heroku, htmlcss, Firebase,Handlebars,Twilio,Passport,Reactstrap, react, MongoDB, Node, Express, Sequelize, jQuery, CSS, Bootstrap, HTML}
 
 class FancyList extends React.Component{
     state = {
@@ -101,7 +118,7 @@ class FancyList extends React.Component{
                 onChange: (page) => {
                     console.log(page);
                 },
-                pageSize: 1,
+                pageSize: 3,
             }}
             dataSource={this.state.data}
             footer = {<FancyListFooter/>}
@@ -123,8 +140,11 @@ class FancyList extends React.Component{
                         title={<a href={item.pageLink}>{item.title}</a>}
                         description={`${item.date.split("T")[0]} | ${item.description}`}
                     />
-                    {item.content}
-                    {<div>{item.keywords.map(word => <Tag>{word}</Tag>)}</div>}    
+                    {/* {item.content} */}
+                    {<div className="keywordsDiv">
+                        {item.keywords.map(word => <span><img style={{height:30}} src={pngs[word]}/></span> )}     
+                    </div>}   
+                    {item.content} 
             </List.Item>
             )}
         />
