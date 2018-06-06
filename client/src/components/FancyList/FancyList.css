@@ -2,6 +2,23 @@
     margin-top: 20px; 
     margin-bottom: 20px;
 }
-.keywordsDi span {
+.keywordsDiv span {
     margin: 10px;
+}
+
+#TProject0 {
+    padding-bottom: 40px;
+}
+
+#TProject1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#TProject2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.ant-list-footer {
+    padding-top: 40px;
 }

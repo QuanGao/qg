@@ -2,7 +2,7 @@ import React from 'react'
 import { Layout } from 'antd';
 import "./FancyList.css";
 import API from "../../utils/API"
-import { List, Avatar, Icon, Tag } from 'antd';
+import { List, Avatar, Icon, Tag, BackTop } from 'antd';
 import CommentBtn from "../CommentBtn";
 import LikeBtn from "../LikeBtn";
 import StarBtn from "../StarBtn";
@@ -111,15 +111,16 @@ class FancyList extends React.Component{
         }
 
     render () {
-        return (<List
+        return (<div id="fancyList">
+            <List
             itemLayout="vertical"
             size="large"
-            pagination={{
-                onChange: (page) => {
-                    console.log(page);
-                },
-                pageSize: 3,
-            }}
+            // pagination={{
+            //     onChange: (page) => {
+            //         console.log(page);
+            //     },
+            //     pageSize: 3,
+            // }}
             dataSource={this.state.data}
             footer = {<FancyListFooter/>}
             renderItem={(item,i) => (
@@ -140,7 +141,6 @@ class FancyList extends React.Component{
                         title={<a href={item.pageLink}>{item.title}</a>}
                         description={`${item.date.split("T")[0]} | ${item.description}`}
                     />
-                    {/* {item.content} */}
                     {<div className="keywordsDiv">
                         {item.keywords.map(word => <span><img style={{height:30}} src={pngs[word]}/></span> )}     
                     </div>}   
@@ -148,6 +148,8 @@ class FancyList extends React.Component{
             </List.Item>
             )}
         />
+        <BackTop/>
+        </div>
     )}
 };
 
