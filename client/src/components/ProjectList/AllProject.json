@@ -85,7 +85,7 @@
     "date" : "2018-02-03T21:41:24.885Z",
     "title" : "Liri Node Assistant",
     "codeLink" : "https://github.com/QuanGao/liri-node-app",
-    "description" : "CLI node app that provides you with info on movie, music, and latest tweets",
+    "description" : "CLI node app that provides you with info on movie, music, & tweeter",
     "likes" : 3,
     "stars" : 3,
     "category" : "solo"
@@ -114,7 +114,7 @@
     "title" : "Time To Get GIPHY",
     "codeLink" : "https://github.com/QuanGao/TimeToGetGIPHY",
     "pageLink" : "https://quangao.github.io/TimeToGetGIPHY/",
-    "description" : "Get awesome gifs of Disney princesses or just about anything",
+    "description" : "Get awesome gifs of just about anything",
     "likes" : 5,
     "stars" : 5,
     "category" : "solo"
@@ -162,7 +162,7 @@
     "title" : "Supernatural Trivia",
     "codeLink" : "https://github.com/QuanGao/TriviaGame",
     "pageLink" : "https://quangao.github.io/TriviaGame/",
-    "description" : "Trivia game based on TV show SUPERNATURAL. Expect great gifs!",
+    "description" : "Trivia game based on TV show SUPERNATURAL with the greatest gifs!",
     "likes" : 9,
     "stars" : 9,
     "category" : "solo"
@@ -179,7 +179,7 @@
     "title" : "Gaming News Scraper",
     "codeLink" : "https://github.com/QuanGao/MongoScraper",
     "pageLink" : "https://arcane-everglades-10622.herokuapp.com/",
-    "description" : "Fresh News Scraping site lets you browse/save/comment newest gaming news!",
+    "description" : "News Scraping site lets you browse/save/comment pc gaming news!",
     "likes" : 15,
     "stars" : 16,
     "category" : "solo"
@@ -196,7 +196,7 @@
     "title" : "Burger Addiction",
     "codeLink" : "https://github.com/QuanGao/Burger",
     "pageLink" : "https://fathomless-reef-79424.herokuapp.com/index",
-    "description" : "Keep track of your burger eating habits here. Featuring a homemade ORM for MySQL",
+    "description" : "Keep track of your burger eating habits here with a side of homemade ORM for MySQL",
     "likes" : 5,
     "stars" : 5,
     "category" : "solo"
@@ -213,7 +213,7 @@
     "title" : "Who is da burger king?",
     "codeLink" : "https://github.com/QuanGao/sequelizedBurger",
     "pageLink" : "https://mighty-fortress-87600.herokuapp.com/index",
-    "description" : "Take your burger consumption to the next level and compete for the title of burger king",
+    "description" : "Take your burger consumption to the next level & compete for the title of burger king",
     "likes" : 12,
     "stars" : 11,
     "category" : "solo"
@@ -227,7 +227,7 @@
     "title" : "Friend Finder",
     "codeLink" : "https://github.com/QuanGao/FriendFinder",
     "pageLink" : "https://vast-scrubland-28230.herokuapp.com/",
-    "description" : "Take a short personality survey and we will match you with your next bff",
+    "description" : "Take a short personality survey and get matched with your next bff",
     "likes" : 5,
     "stars" : 5,
     "category" : "solo"
@@ -242,7 +242,7 @@
     "date" : "2018-02-20T21:41:24.885Z",
     "title" : "Bamazon",
     "codeLink" : "https://github.com/QuanGao/bamazon",
-    "description" : "A business managment CLI that can act both as storefront and as store manager",
+    "description" : "A business managment CLI that functions both as storefront and store manager",
     "likes" : 9,
     "stars" : 9,
     "category" : "solo"
@@ -255,7 +255,7 @@
     "date" : "2018-02-12T21:41:24.885Z",
     "title" : "Constructor Hangman",
     "codeLink" : "https://github.com/QuanGao/Constructor-Hangman",
-    "description" : "A command line based node hangman game",
+    "description" : "A command line based hangman game run in node",
     "likes" : 5,
     "stars" : 5,
     "category" : "solo"
