@@ -5,7 +5,7 @@ import Home from "../Home"
 import Skills from "../Skills"
 import Contact from "../Contact"
 import Project from "../Project"
-import ProgressBar from "../ProgressBar"
+// import ProgressBar from "../ProgressBar"
 
 const {Sider } = Layout;
 
@@ -19,7 +19,9 @@ class SiderDemo extends React.Component {
         this.setState({ collapsed });
     };
     handleClick = (event) => {
-        this.setState({activeKey: event.key})
+        if( +event.key < 6 ) {
+            this.setState({activeKey: event.key})
+        }  
     };
     renderMenuItem = (key) => {
         switch(key) {
@@ -32,10 +34,10 @@ class SiderDemo extends React.Component {
                 return <Project projectType={key}/>;
             case "5":
                 return <Contact/>;
-            case "6":
-                return <ProgressBar progressBarTitle="Redirecting to Quan's Github...."/>;
-            case "7":
-                return <ProgressBar progressBarTitle="Redirecting to Quan's Linkedin..."/>;
+            // case "6":
+            //     return <ProgressBar progressBarTitle="Redirecting to Quan's Github...."/>;
+            // case "7":
+            //     return <ProgressBar progressBarTitle="Redirecting to Quan's Linkedin..."/>;
             default:
                 return <Home/>;
         }
@@ -68,6 +70,7 @@ class SiderDemo extends React.Component {
                             <Icon type="form" />
                             <span>Contact</span>
                         </Menu.Item>
+
                         <Menu.Item key="6">
                             <a href="https://github.com/QuanGao">
                                 <Icon type="github" />

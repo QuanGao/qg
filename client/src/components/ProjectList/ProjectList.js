@@ -154,7 +154,6 @@ class ProjectList extends React.Component {
       <List
         className="demo-loadmore-list"
         loading={loading}
-        // itemLayout="horizontal"
         itemLayout="vertical"
         dataSource={data}
         renderItem={(item) => (
@@ -165,7 +164,7 @@ class ProjectList extends React.Component {
                                 <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
                                 <a href={item.codeLink}><Icon type="code-o"/></a>                   
                             ]}
-                    extra={<span>{item.keywords.map(word => <Tag color={tags[word]}>{word}</Tag>)}</span>}                                
+                    extra={<span>{item.keywords.map(word => <Tag color={tags[word]}>{word}</Tag>)}</span>}                         
             >            
             
             <List.Item.Meta
@@ -173,14 +172,6 @@ class ProjectList extends React.Component {
               title={<a href={item.pageLink ||item.codeLink }>{item.title}</a>}
               description={`${item.date.split("T")[0]} | ${item.description}`}
             />
-            
-            {/* <div>
-                <StarBtn star={item.star} stars={item.stars} handleStarBtn={()=>this.handleStarBtn(item._id)}/>  
-                <Divider type="vertical"/>
-                <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/> 
-                <Divider type="vertical"/>
-                <CommentBtn projectId={item._id} data={item} handleSaveComment={this.handleSaveComment}/>
-            </div> */}
             
           </List.Item>
         )}
