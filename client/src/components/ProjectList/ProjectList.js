@@ -34,7 +34,7 @@ class ProjectList extends React.Component {
     state = {
         loading: true,
         data: [],
-        sortParam: ""
+        // sortParam: ""
     }
 
     componentDidMount(){
@@ -48,18 +48,25 @@ class ProjectList extends React.Component {
             }
         )
     }
-    handleSortParamChange = (value) => {
-        this.setState({
-            sortParam: value
-        })
-    };
+    // handleSortParamChange = (value) => {
+    //     this.setState({
+    //         sortParam: value
+    //     })
+    // };
 
-    handleSort = (incremental, param) => {
+    // handleSort = (incremental, param) => {
+    //     const data = [...this.state.data];
+    //     this.setState({
+    //         data: this.sortProjects(data, incremental, param)
+    //     })
+    // }
+
+    handleSortParamChange = (param) => {
         const data = [...this.state.data];
-        this.setState({
-            data: this.sortProjects(data, incremental, param)
-        })
-    }
+            this.setState({
+                data: this.sortProjects(data, false, param)
+            })
+    };
 
     sortProjects = (data, incremental, param) => {
         return data.sort((a,b) => {        

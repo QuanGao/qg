@@ -21,3 +21,7 @@
 .sortByText {
     margin-right: 5px;  
 }
+
+.ant-select-selection.ant-select-selection--single{
+    border: 1px #1890ff solid
+}

@@ -70,7 +70,6 @@ class SiderDemo extends React.Component {
                             <Icon type="form" />
                             <span>Contact</span>
                         </Menu.Item>
-
                         <Menu.Item key="6">
                             <a href="https://github.com/QuanGao" target="_blank">
                                 <Icon type="github" />
@@ -83,7 +82,6 @@ class SiderDemo extends React.Component {
                                 <span>Linkedin</span>
                             </a>
                         </Menu.Item>
-
                     </Menu>
                 </Sider>  
                 {this.renderMenuItem(this.state.activeKey)}          
