@@ -72,13 +72,13 @@ class SiderDemo extends React.Component {
                         </Menu.Item>
 
                         <Menu.Item key="6">
-                            <a href="https://github.com/QuanGao">
+                            <a href="https://github.com/QuanGao" target="_blank">
                                 <Icon type="github" />
                                 <span>Github</span>
                             </a>
                         </Menu.Item>
                         <Menu.Item key="7">
-                            <a href="https://www.linkedin.com/in/quan-gao-code">
+                            <a href="https://www.linkedin.com/in/quan-gao-code" target="_blank">
                                 <Icon type="linkedin" />
                                 <span>Linkedin</span>
                             </a>
