@@ -1,10 +1,8 @@
 import React from 'react'
-import { List, Avatar, Button, Spin, Icon, Divider, BackTop, Tag} from 'antd';
+import { List, Avatar, Button, Icon, BackTop, Tag} from 'antd';
 import "./ProjectList.css"
-import axios from 'axios';
 import API from "../../utils/API"
 import profile from "./images/quan.jpg"
-import scrollToComponent from 'react-scroll-to-component';
 import CommentBtn from "../CommentBtn";
 import LikeBtn from "../LikeBtn";
 import StarBtn from "../StarBtn";
@@ -33,8 +31,7 @@ const tags = {
 class ProjectList extends React.Component {
     state = {
         loading: true,
-        data: [],
-        // sortParam: ""
+        data: []
     }
 
     componentDidMount(){
@@ -48,18 +45,6 @@ class ProjectList extends React.Component {
             }
         )
     }
-    // handleSortParamChange = (value) => {
-    //     this.setState({
-    //         sortParam: value
-    //     })
-    // };
-
-    // handleSort = (incremental, param) => {
-    //     const data = [...this.state.data];
-    //     this.setState({
-    //         data: this.sortProjects(data, incremental, param)
-    //     })
-    // }
 
     handleSortParamChange = (param) => {
         const data = [...this.state.data];

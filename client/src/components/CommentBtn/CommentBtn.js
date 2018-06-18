@@ -1,7 +1,6 @@
 import React from 'react'
-import {Modal, Button, Icon, Input} from 'antd';
+import {Modal, Icon, Input} from 'antd';
 import "./CommentBtn.css";
-import API from "../../utils/API"
 import SimpleList from "../SimpleList"
 
 const {TextArea} = Input

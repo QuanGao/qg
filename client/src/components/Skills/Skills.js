@@ -1,17 +1,16 @@
 import React from 'react'
-// import { Layout, Menu, Breadcrumb, Icon, Col, Row } from 'antd';
 import { Layout, Icon} from 'antd';
 import "./Skills.css";
 import MyFooter from "../MyFooter"
 import data from "./data.json";
 import {Treemap} from "recharts";
 
-const { Header, Content, Footer} = Layout;
+const { Header, Content} = Layout;
 const COLORS = ['#f38c74','#F8C12D', '#64c195', '#8889DD'];
 
 class CustomizedContent extends React.Component{
   render() {
-    const { root, depth, x, y, width, height, index, payload, colors, rank, name,fontSize } = this.props;
+    const { root, depth, x, y, width, height, index, colors, name,fontSize } = this.props;
 
     return (
       <g>

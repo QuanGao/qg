@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import Sider from "./components/Sider";
-
-// import Home from "./components/Home";
+import { BrowserRouter } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-
-
-
-
-        <div className="App">
-            <Sider/> 
-        </div>  
-
-
- 
+        <BrowserRouter>
+            <div className="App">
+                <Sider/> 
+            </div>  
+        </BrowserRouter>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Icon} from 'antd';
+import {Icon} from 'antd';
 import "./LikeBtn.css";
 
 class LikeBtn extends React.Component { 

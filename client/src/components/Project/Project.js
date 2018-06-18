@@ -8,25 +8,23 @@ import FancyList from "../FancyList";
 
 const { Header, Content} = Layout;
 class Project extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
-    renderProjectContent = (projectType) => {
-        return projectType==="3"? <ProjectList/>:<FancyList/>
+    renderProjectContent = () => {
+        return this.props.match.params.type==="solo"? 
+        (<ProjectList/>):
+        (<FancyList/>)
             
     }
-    renderProjectHeader = (projectType) => {
-        return projectType==="3"? <h1>Independent Projects</h1>:<h1>Team Projects</h1>
+    renderProjectHeader = () => {
+        return this.props.match.params.type==="solo"? <h1>Independent Projects</h1>:<h1>Team Projects</h1>
     }
     render() {
         return (
             <Layout className="content-wrapper">
                 <Header style={{ background: '#fff', padding: 0 }} >
-                    {this.renderProjectHeader(this.props.projectType)}
+                    {this.renderProjectHeader()}
                 </Header>
                 <Content style={{ margin: '0 16px', padding:20}}>                   
-                    {this.renderProjectContent(this.props.projectType)}
+                    {this.renderProjectContent()}
                 </Content>
                 <MyFooter/> 
             </Layout>
