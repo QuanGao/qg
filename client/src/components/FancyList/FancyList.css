@@ -1,9 +1,12 @@
 .keywordsDiv {
-    margin-top: 20px; 
-    margin-bottom: 20px;
+    margin-top: 30px; 
+    margin-bottom: 30px;
 }
 .keywordsDiv span {
     margin: 10px;
+}
+.ant-list-item-action {
+    margin-top: 30px; 
 }
 
 #TProject0 {
