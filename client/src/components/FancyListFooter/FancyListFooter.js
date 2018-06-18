@@ -2,9 +2,24 @@ import React from 'react';
 import {Tag} from "antd";
 import "./FancyListFooter.css";
 
+const renderTeamMates = (page) => {
+    switch(page){
+        case 1:
+            return <span>Michelle Yuen, Sean Arca, Amy Carrillo, Zach Pleasant</span>
+        case 2:
+            return <span>Michelle Yuen, Sean Arca, Amy Carrillo</span> 
+        case 3:
+            return <span>Ryan Park, Luis Rosales, Peter Juffernbruch</span> 
+    }
+}
+
+
 const FancyListFooter = (props) => (
     <div className="FancyListFooter">
-        <h3>Collaborators</h3>
+        <Tag> Team </Tag>
+        {renderTeamMates(props.page)}
+
+        {/* <h3>Collaborators</h3>
         <div>
             <a href="#TProject0"><Tag color="green">RoomieU </Tag></a>
             Michelle Yuen, Sean Arca, Amy Carrillo, Zach Pleasant
@@ -16,7 +31,7 @@ const FancyListFooter = (props) => (
         <div>
             <a href="#TProject2"><Tag color="blue">Dinner Savior </Tag></a>
             Ryan Park, Luis Rosales, Peter Juffernbruch
-        </div>  
+        </div>   */}
     </div>
 )
 

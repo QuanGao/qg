@@ -18,7 +18,7 @@ router.post('/submit', (req, res) => {
     }, (error) => {
         console.log("error",error)
       if (error) {
-        return res.send({status: 'KO'});
+        return res.send({status: 'not OK'});
       } else {
         return res.send({status: 'OK'});
       }

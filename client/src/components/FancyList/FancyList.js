@@ -30,7 +30,8 @@ const { Header, Content} = Layout;
 
 class FancyList extends React.Component{
     state = {
-        data:[]
+        data:[],
+        page:1
     }
 
     componentDidMount(){
@@ -122,14 +123,15 @@ class FancyList extends React.Component{
                 <List
                 itemLayout="vertical"
                 size="large"
-                // pagination={{
-                //     onChange: (page) => {
-                //         console.log(page);
-                //     },
-                //     pageSize: 1,
-                // }}
+                pagination={{
+                    onChange: (page) => {
+                        console.log(page);
+                        this.setState({page})
+                    },
+                    pageSize: 1,
+                }}
                 dataSource={this.state.data}
-                footer = {<FancyListFooter/>}
+                footer = {<FancyListFooter page={this.state.page}/>}
                 renderItem={(item,i) => (
                     <List.Item
                         key={item.title}
@@ -138,14 +140,14 @@ class FancyList extends React.Component{
                         <StarBtn star={item.star} stars={item.stars} handleStarBtn={()=>this.handleStarBtn(item._id)}/>,
                         <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/>,
                         <CommentBtn projectId={item._id} data={item} handleSaveComment={this.handleSaveComment}/>,
-                        <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
-                        <a href={item.codeLink}><Icon type="code-o"/></a>
+                        <a href={item.pageLink} target="_blank" rel="noopener noreferrer"><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
+                        <a href={item.codeLink} target="_blank" rel="noopener noreferrer"><Icon type="code-o"/></a>
                     ]}
-                extra={<a href={item.pageLink}><img width={272} alt="logo" src={item.imgSrc}/></a>}
+                extra={<a href={item.pageLink} target="_blank" rel="noopener noreferrer"><img width={272} alt="logo" src={item.imgSrc}/></a>}
                     >
                         <List.Item.Meta
                             avatar={<Avatar src={item.avatar} />}
-                            title={<a href={item.pageLink}>{item.title}</a>}
+                            title={<a href={item.pageLink} target="_blank" rel="noopener noreferrer">{item.title}</a>}
                             description={`${item.date.split("T")[0]} | ${item.description}`}
                         />
                         {<div className="keywordsDiv">

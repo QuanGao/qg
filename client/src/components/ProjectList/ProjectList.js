@@ -1,5 +1,5 @@
 import React from 'react'
-import { List, Avatar, Button, Icon, BackTop, Tag, Layout} from 'antd';
+import { List, Avatar,Icon, BackTop, Tag, Layout} from 'antd';
 import MyFooter from "../MyFooter"
 import "./ProjectList.css"
 import API from "../../utils/API"
@@ -148,10 +148,9 @@ class ProjectList extends React.Component {
         </Header>
 
         <Content style={{ margin: '0 16px', padding:20}}> 
-    
-            <Button.Group size={12}>        
-                <SortBtn handleSort={this.handleSort} sortParam={this.state.sortParam} handleSortParamChange={this.handleSortParamChange}/>
-            </Button.Group>
+  
+            <SortBtn handleSort={this.handleSort} sortParam={this.state.sortParam} handleSortParamChange={this.handleSortParamChange}/>
+
             <List
                 className="demo-loadmore-list"
                 loading={loading}
@@ -163,15 +162,15 @@ class ProjectList extends React.Component {
                         <StarBtn star={item.star} stars={item.stars} handleStarBtn={()=>this.handleStarBtn(item._id)}/>,
                         <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/>,
                         <CommentBtn projectId={item._id} data={item} handleSaveComment={this.handleSaveComment}/>,
-                        <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
-                        <a href={item.codeLink}><Icon type="code-o"/></a>                   
+                        <a href={item.pageLink} target="_blank" rel="noopener noreferrer"><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
+                        <a href={item.codeLink} target="_blank" rel="noopener noreferrer"><Icon type="code-o"/></a>                   
                         ]}
                     extra={<span>{item.keywords.map((word,i) => <Tag key={i} color={tags[word]}>{word}</Tag>)}</span>}                         
                     >            
                     
                     <List.Item.Meta
                     avatar={<Avatar src={profile} />}            
-                    title={<a href={item.pageLink ||item.codeLink }>{item.title}</a>}
+                    title={<a href={item.pageLink ||item.codeLink } target="_blank" rel="noopener noreferrer">{item.title}</a>}
                     description={`${item.date.split("T")[0]} | ${item.description}`}
                     />
                     
