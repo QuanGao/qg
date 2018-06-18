@@ -53,7 +53,7 @@ class CommentBtn extends React.Component {
             </span>
         );
         return (
-          <frag>
+          <span>
             <IconText type="message" text={data.notes? data.notes.length:0} /> 
             <Modal title={data.title}
               visible={visible}
@@ -64,7 +64,7 @@ class CommentBtn extends React.Component {
             {showCommentInput && <TextArea name="commentInput" onChange={this.handleCommentInput} placeholder="Any suggestion or comment is welcome" autosize />}
             {data.notes?<SimpleList data={data.notes}/>: null}                              
             </Modal>
-          </frag>
+          </span>
         );
     }
 }

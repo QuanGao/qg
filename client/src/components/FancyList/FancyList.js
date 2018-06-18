@@ -149,7 +149,7 @@ class FancyList extends React.Component{
                             description={`${item.date.split("T")[0]} | ${item.description}`}
                         />
                         {<div className="keywordsDiv">
-                            {item.keywords.map(word => <span><img style={{height:30}} src={pngs[word]} alt="word"/></span> )}     
+                            {item.keywords.map((word,i) => <span key={i}><img style={{height:30}} src={pngs[word]} alt="word"/></span> )}     
                         </div>}   
                         {item.content} 
                 </List.Item>

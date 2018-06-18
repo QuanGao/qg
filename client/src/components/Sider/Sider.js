@@ -26,8 +26,7 @@ class SiderDemo extends React.Component {
                     <div className="logo">
                         {this.state.collapsed? (<h1>QG</h1>):(<h1>Quan Gao</h1>)}          
                     </div>
-                    {/* <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline"> */}
-                    <Menu theme="dark" defaultSelectedKeys={`${path}`} mode="inline">
+                    <Menu theme="dark" defaultSelectedKeys={[`${path}`]} mode="inline">
                            
                         <Menu.Item key="home">
                             <Link to="/">

@@ -166,7 +166,7 @@ class ProjectList extends React.Component {
                         <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
                         <a href={item.codeLink}><Icon type="code-o"/></a>                   
                         ]}
-                    extra={<span>{item.keywords.map(word => <Tag color={tags[word]}>{word}</Tag>)}</span>}                         
+                    extra={<span>{item.keywords.map((word,i) => <Tag key={i} color={tags[word]}>{word}</Tag>)}</span>}                         
                     >            
                     
                     <List.Item.Meta
