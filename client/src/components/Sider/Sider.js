@@ -4,8 +4,9 @@ import "./Sider.css";
 import Home from "../Home"
 import Skills from "../Skills"
 import Contact from "../Contact"
-import Project from "../Project"
-import { Route, Switch, Link } from "react-router-dom"
+import { Route, Switch, Link } from "react-router-dom";
+import ProjectList from "../ProjectList";
+import FancyList from "../FancyList";
 
 const {Sider } = Layout;
 
@@ -18,43 +19,45 @@ class SiderDemo extends React.Component {
         this.setState({ collapsed });
     };
     render() {
+        let path = window.location.href.split('/')[3] || "home"
         return (
             <Layout style={{ minHeight: '100vh' }}>
                 <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>         
                     <div className="logo">
                         {this.state.collapsed? (<h1>QG</h1>):(<h1>Quan Gao</h1>)}          
                     </div>
-                    <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-                        
-                        <Menu.Item key="1">
+                    {/* <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline"> */}
+                    <Menu theme="dark" defaultSelectedKeys={`${path}`} mode="inline">
+                           
+                        <Menu.Item key="home">
                             <Link to="/">
                                 <Icon type="smile-o" />
                                 <span>Who?</span>
                             </Link>
                         </Menu.Item>
                         
-                        <Menu.Item key="2">
+                        <Menu.Item key="skills">
                             <Link to="/skills">
                                 <Icon type="tool" />
                                 <span>Skills</span>
                             </Link>
                         </Menu.Item>
 
-                        <Menu.Item key="3">
-                            <Link to="/project/solo">
+                        <Menu.Item key="solo">
+                            <Link to="/solo">
                                 <Icon type="user" />
                                 <span>Solo Work</span>
                             </Link>
                         </Menu.Item>
 
-                        <Menu.Item key="4">
-                            <Link to="/project/team">
+                        <Menu.Item key="team">
+                            <Link to="/team">
                                 <Icon type="team" />
                                 <span>Collaboration</span>
                             </Link>
                         </Menu.Item>
 
-                        <Menu.Item key="5">
+                        <Menu.Item key="contact">
                             <Link to="/contact">
                                 <Icon type="form" />
                                 <span>Contact</span>
@@ -80,7 +83,8 @@ class SiderDemo extends React.Component {
             <Switch>
                 <Route exact path="/" component={Home}></Route>
                 <Route exact path="/skills" component={Skills}></Route>
-                <Route exact path="/project/:type" component={Project}></Route>
+                <Route exact path="/solo" component={ProjectList}></Route>
+                <Route exact path="/team" component={FancyList}></Route>
                 <Route exact path="/contact" component={Contact}></Route>                
             </Switch>    
 

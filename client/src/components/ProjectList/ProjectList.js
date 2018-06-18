@@ -1,5 +1,6 @@
 import React from 'react'
-import { List, Avatar, Button, Icon, BackTop, Tag} from 'antd';
+import { List, Avatar, Button, Icon, BackTop, Tag, Layout} from 'antd';
+import MyFooter from "../MyFooter"
 import "./ProjectList.css"
 import API from "../../utils/API"
 import profile from "./images/quan.jpg"
@@ -8,6 +9,7 @@ import LikeBtn from "../LikeBtn";
 import StarBtn from "../StarBtn";
 import SortBtn from "../SortBtn";
 
+const { Header, Content} = Layout;
 const tags = {
     React: "#f50",
     jQuery: "#f50",
@@ -139,37 +141,47 @@ class ProjectList extends React.Component {
   render() {
     const { loading,data} = this.state;
     return (
-    <div>
-        <Button.Group size={12}>        
-            <SortBtn handleSort={this.handleSort} sortParam={this.state.sortParam} handleSortParamChange={this.handleSortParamChange}/>
-        </Button.Group>
-      <List
-        className="demo-loadmore-list"
-        loading={loading}
-        itemLayout="vertical"
-        dataSource={data}
-        renderItem={(item) => (
-          <List.Item actions={[
-                                <StarBtn star={item.star} stars={item.stars} handleStarBtn={()=>this.handleStarBtn(item._id)}/>,
-                                <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/>,
-                                <CommentBtn projectId={item._id} data={item} handleSaveComment={this.handleSaveComment}/>,
-                                <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
-                                <a href={item.codeLink}><Icon type="code-o"/></a>                   
-                            ]}
+    <Layout className="content-wrapper">
+
+        <Header style={{ background: '#fff', padding: 0 }} >
+            <h1>Independent Projects</h1>
+        </Header>
+
+        <Content style={{ margin: '0 16px', padding:20}}> 
+    
+            <Button.Group size={12}>        
+                <SortBtn handleSort={this.handleSort} sortParam={this.state.sortParam} handleSortParamChange={this.handleSortParamChange}/>
+            </Button.Group>
+            <List
+                className="demo-loadmore-list"
+                loading={loading}
+                itemLayout="vertical"
+                dataSource={data}
+                renderItem={(item) => (
+                <List.Item 
+                    actions={[
+                        <StarBtn star={item.star} stars={item.stars} handleStarBtn={()=>this.handleStarBtn(item._id)}/>,
+                        <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/>,
+                        <CommentBtn projectId={item._id} data={item} handleSaveComment={this.handleSaveComment}/>,
+                        <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
+                        <a href={item.codeLink}><Icon type="code-o"/></a>                   
+                        ]}
                     extra={<span>{item.keywords.map(word => <Tag color={tags[word]}>{word}</Tag>)}</span>}                         
-            >            
-            
-            <List.Item.Meta
-              avatar={<Avatar src={profile} />}            
-              title={<a href={item.pageLink ||item.codeLink }>{item.title}</a>}
-              description={`${item.date.split("T")[0]} | ${item.description}`}
+                    >            
+                    
+                    <List.Item.Meta
+                    avatar={<Avatar src={profile} />}            
+                    title={<a href={item.pageLink ||item.codeLink }>{item.title}</a>}
+                    description={`${item.date.split("T")[0]} | ${item.description}`}
+                    />
+                    
+                </List.Item>
+                )}
             />
-            
-          </List.Item>
-        )}
-      />
-      <BackTop />    
-    </div>
+            <BackTop />
+        </Content>    
+        <MyFooter/> 
+        </Layout>
     );
   }
 }

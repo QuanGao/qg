@@ -1,12 +1,12 @@
 import React from 'react'
 import "./FancyList.css";
 import API from "../../utils/API"
-import { List, Avatar, Icon, BackTop } from 'antd';
+import { List, Avatar, Icon, BackTop, Layout } from 'antd';
 import CommentBtn from "../CommentBtn";
 import LikeBtn from "../LikeBtn";
 import StarBtn from "../StarBtn";
 import FancyListFooter from "../FancyListFooter"
-
+import MyFooter from "../MyFooter"
 import Firebase from "./images/firebase.png"
 import Handlebars from "./images/handlebars.png"
 import Twilio from "./images/twilio.png"
@@ -26,6 +26,7 @@ import htmlcss from "./images/htmlcss.png"
 import api from "./images/api.jpg";
 import Heroku from "./images/heroku.png"
 const pngs = {API:api, React:react, Heroku, htmlcss, Firebase,Handlebars,Twilio,Passport,Reactstrap, react, MongoDB, Node, Express, Sequelize, jQuery, CSS, Bootstrap, HTML}
+const { Header, Content} = Layout;
 
 class FancyList extends React.Component{
     state = {
@@ -110,45 +111,55 @@ class FancyList extends React.Component{
         }
 
     render () {
-        return (<div id="fancyList">
-            <List
-            itemLayout="vertical"
-            size="large"
-            // pagination={{
-            //     onChange: (page) => {
-            //         console.log(page);
-            //     },
-            //     pageSize: 1,
-            // }}
-            dataSource={this.state.data}
-            footer = {<FancyListFooter/>}
-            renderItem={(item,i) => (
-                <List.Item
-                    key={item.title}
-                    id={`TProject${i}`}
-                    actions={[
-                    <StarBtn star={item.star} stars={item.stars} handleStarBtn={()=>this.handleStarBtn(item._id)}/>,
-                    <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/>,
-                    <CommentBtn projectId={item._id} data={item} handleSaveComment={this.handleSaveComment}/>,
-                    <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
-                    <a href={item.codeLink}><Icon type="code-o"/></a>
-                ]}
-            extra={<a href={item.pageLink}><img width={272} alt="logo" src={item.imgSrc}/></a>}
-                >
-                    <List.Item.Meta
-                        avatar={<Avatar src={item.avatar} />}
-                        title={<a href={item.pageLink}>{item.title}</a>}
-                        description={`${item.date.split("T")[0]} | ${item.description}`}
-                    />
-                    {<div className="keywordsDiv">
-                        {item.keywords.map(word => <span><img style={{height:30}} src={pngs[word]} alt="word"/></span> )}     
-                    </div>}   
-                    {item.content} 
-            </List.Item>
-            )}
-        />
-        <BackTop/>
-        </div>
+        return (
+        <Layout className="content-wrapper">
+
+            <Header style={{ background: '#fff', padding: 0 }} >
+                <h1>Team Projects</h1>
+            </Header>
+        
+            <Content style={{ margin: '0 16px', padding:20}}> 
+                <List
+                itemLayout="vertical"
+                size="large"
+                // pagination={{
+                //     onChange: (page) => {
+                //         console.log(page);
+                //     },
+                //     pageSize: 1,
+                // }}
+                dataSource={this.state.data}
+                footer = {<FancyListFooter/>}
+                renderItem={(item,i) => (
+                    <List.Item
+                        key={item.title}
+                        id={`TProject${i}`}
+                        actions={[
+                        <StarBtn star={item.star} stars={item.stars} handleStarBtn={()=>this.handleStarBtn(item._id)}/>,
+                        <LikeBtn like={item.like} likes={item.likes} handleLikeBtn={()=>this.handleLikeBtn(item._id)}/>,
+                        <CommentBtn projectId={item._id} data={item} handleSaveComment={this.handleSaveComment}/>,
+                        <a href={item.pageLink}><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
+                        <a href={item.codeLink}><Icon type="code-o"/></a>
+                    ]}
+                extra={<a href={item.pageLink}><img width={272} alt="logo" src={item.imgSrc}/></a>}
+                    >
+                        <List.Item.Meta
+                            avatar={<Avatar src={item.avatar} />}
+                            title={<a href={item.pageLink}>{item.title}</a>}
+                            description={`${item.date.split("T")[0]} | ${item.description}`}
+                        />
+                        {<div className="keywordsDiv">
+                            {item.keywords.map(word => <span><img style={{height:30}} src={pngs[word]} alt="word"/></span> )}     
+                        </div>}   
+                        {item.content} 
+                </List.Item>
+                )}
+            />
+            <BackTop/>
+            </Content>    
+            <MyFooter/> 
+        </Layout>
+
     )}
 };
 
