@@ -11,20 +11,17 @@ import FancyList from "../FancyList";
 const {Sider } = Layout;
 
 class SiderDemo extends React.Component {
-    state = {
-        collapsed: false
-    };
-    onCollapse = (collapsed) => {
-        console.log(collapsed);
-        this.setState({ collapsed });
-    };
     render() {
-        let path = window.location.href.split('/')[3] || "home"
+        const path = window.location.href.split('/')[3] || "home"
         return (
             <Layout style={{ minHeight: '100vh' }}>
-                <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>         
+                <Sider 
+                onCollapse={(collapsed, type) => { console.log(collapsed, type)}}
+                breakpoint="md"
+                collapsedWidth="0"
+                >     
                     <div className="logo">
-                        {this.state.collapsed? (<h1>QG</h1>):(<h1>Quan Gao</h1>)}          
+                        <h1>Quan Gao</h1>
                     </div>
                     <Menu theme="dark" defaultSelectedKeys={[`${path}`]} mode="inline">
                            
@@ -82,7 +79,12 @@ class SiderDemo extends React.Component {
             <Switch>
                 <Route exact path="/" component={Home}></Route>
                 <Route exact path="/skills" component={Skills}></Route>
-                <Route exact path="/solo" component={ProjectList}></Route>
+
+                {/* <Route exact path="/solo" component={ProjectList} ></Route> */}
+                <Route exact path="/solo" component={ProjectList} >
+                </Route>
+                
+
                 <Route exact path="/team" component={FancyList}></Route>
                 <Route exact path="/contact" component={Contact}></Route>                
             </Switch>    

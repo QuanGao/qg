@@ -10,6 +10,8 @@ const renderTeamMates = (page) => {
             return <span>Michelle Yuen, Sean Arca, Amy Carrillo</span> 
         case 3:
             return <span>Ryan Park, Luis Rosales, Peter Juffernbruch</span> 
+        default:
+            return <span>Awesome team mates</span>
     }
 }
 
