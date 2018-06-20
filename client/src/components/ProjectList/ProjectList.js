@@ -152,7 +152,7 @@ class ProjectList extends React.Component {
             <SortBtn handleSort={this.handleSort} sortParam={this.state.sortParam} handleSortParamChange={this.handleSortParamChange}/>
 
             <List
-                className="demo-loadmore-list"
+                className="solo-project-list"
                 loading={loading}
                 itemLayout="vertical"
                 dataSource={data}
@@ -165,7 +165,7 @@ class ProjectList extends React.Component {
                         <a href={item.pageLink} target="_blank" rel="noopener noreferrer"><Icon type={item.pageLink?"play-circle-o":"minus-circle-o"}/></a>,
                         <a href={item.codeLink} target="_blank" rel="noopener noreferrer"><Icon type="code-o"/></a>                   
                         ]}
-                    extra={<span>{item.keywords.map((word,i) => <Tag key={i} color={tags[word]}>{word}</Tag>)}</span>}                         
+                    extra={<span className="techTags">{item.keywords.map((word,i) => <Tag key={i} color={tags[word]}>{word}</Tag>)}</span>}                         
                     >            
                     
                     <List.Item.Meta
