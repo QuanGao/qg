@@ -24,7 +24,6 @@ class SiderDemo extends React.Component {
                         <h1>Quan Gao</h1>
                     </div>
                     <Menu theme="dark" defaultSelectedKeys={[`${path}`]} mode="inline">
-                           
                         <Menu.Item key="home">
                             <Link to="/">
                                 <Icon type="smile-o" />

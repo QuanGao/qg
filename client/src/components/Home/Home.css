@@ -1,5 +1,6 @@
 .home {
-    background-image: url("./images/rawpixel-256642-unsplash_lowRes.jpg");
+    /* background-image: url("./images/rawpixel-256642-unsplash_lowRes.jpg"); */
+    background-image: url("./images/gareth-harper-128701-unsplash-rotated.jpg");
     background-size: cover;
 }
 
@@ -7,13 +8,9 @@
     position: relative;
 }
 .bio {
-    padding: 30px;  
-    background-color: rgba(255, 255, 255, 0.4);
-    width: 400px;
-    margin-top: 80px;
-    margin-left: 320px;
-    position: relative;
-    left:20px;
+    padding: 20px; 
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 120px auto;
     box-shadow: 10px 10px 5px grey;
 }
 .bio h1 {
@@ -24,11 +21,13 @@
     font-weight: 400;
 }
 
-@media all and (min-width: 1200px) {
+@media all and (min-width: 576px) {
     .bio {
-        margin-left: auto;
-        margin-right: auto;
-        left:30px;
-
+        width: 500px;
+    }
+}
+@media all and (min-width: 1024px) {
+    .bio {
+        margin-left: 150px;
     }
 }

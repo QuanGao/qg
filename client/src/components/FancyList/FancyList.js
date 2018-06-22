@@ -121,6 +121,7 @@ class FancyList extends React.Component{
         
             <Content style={{ margin: '0 16px', padding:20}}> 
                 <List
+                className="fancyList"
                 itemLayout="vertical"
                 size="large"
                 pagination={{

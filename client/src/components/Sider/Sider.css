@@ -13,12 +13,5 @@
     background-color: #2193d7;
 }
 
-/* .ant-layout-sider-zero-width-trigger {
-    display: none;
-} */
-
 @media screen and (max-width:576px) {
-    /* .ant-layout-sider-zero-width-trigger {
-        display: inline;
-    } */
 }
