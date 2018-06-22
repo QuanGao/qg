@@ -4,12 +4,8 @@
 }
 
 .contact {
-    margin: 90px auto 0px;
+    margin: 120px auto 0px;
     background-color: rgb(255,255,255,0.8);
     box-shadow: 10px 10px 5px
    
-}
-
-@media all and (min-width: 560px) {
-    
 }

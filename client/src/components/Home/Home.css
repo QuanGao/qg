@@ -1,6 +1,5 @@
 .home {
-    /* background-image: url("./images/rawpixel-256642-unsplash_lowRes.jpg"); */
-    background-image: url("./images/gareth-harper-128701-unsplash-rotated.jpg");
+    background-image: url("./images/gareth-harper-128701-unsplash-rotated-midRes.jpg");
     background-size: cover;
 }
 
@@ -24,6 +23,7 @@
 @media all and (min-width: 576px) {
     .bio {
         width: 500px;
+        padding: 30px; 
     }
 }
 @media all and (min-width: 1024px) {
