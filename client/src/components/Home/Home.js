@@ -13,15 +13,21 @@ class Home extends React.Component {
                     <Col span={24} >
                     <div className="bio" >
                         <h1> About me </h1>
-                        <p>Hello there! I'm Quan, a full stack web developer and avid learner. 
-                            I am pretty comfortable throughout the <strong> MERN </strong>stack. Outside of MERN, 
-                            I have also built projects with <strong> mySQL </strong> and <strong>firebase </strong>.
+                        <p>
+                            Hello there! I'm Quan, a software engineer, biologist &amp; avid learner. 
+                            In my current job, I work primarily as a front end developer specializing in React and JQuery. 
+                            I also enjoy the occasional opportunity to dabble in some back end development.
+                            
+                            Outside of work, I have also built full stack projects with technologies such as 
+                            React, Node.js, Express, MongoDB, mySQL, Firebase, and etc. 
+
+                            In the future, I'd like to become proficient with object oriented languages and 
+                            gain deeper experience in the back end development area.
                         </p>
                         <p>
-                            Writing clean code and designing optimal solutions to challenging 
-                            problems give me great satisfaction. For me, spending time solving algorithm 
-                            puzzles is a total treat. I am thrilled to embark on an exciting new journey into software/web development. 
-                            In my other life, I hold a PhD degree in biology from the University of Chicago and do research for a living.
+                            Prior to software development, I worked in the biomedical research field for several years.
+                            First as a graduate student at the University of Chicago studying muscular dystrophy and 
+                            later as a researcher at Northwestern University investigating potential cures for cancer.
                         </p>
                     </div>
                     </Col>

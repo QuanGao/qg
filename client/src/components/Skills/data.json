@@ -51,7 +51,7 @@
             "fontSize": 24
         },
         {
-            "name": "CSS",
+            "name": "CSS+LESS",
             "size": 6985,
             "fontSize": 24
         },
@@ -69,27 +69,27 @@
 {
     "name": "FRAMEWORK/LIBRARY",
     "children": [{
-            "name": "Node.js",
+            "name": "React",
             "size": 16544,
             "fontSize": 24
         },
         {
-            "name": "Express",
+            "name": "JQuery",
             "size": 14788,
             "fontSize": 24
         },
         {
-            "name": "JQuery",
+            "name": "Node.js",
             "size": 11349,
             "fontSize": 24
         },
         {
-            "name": "React",
+            "name": "Express",
             "size": 11921,
             "fontSize": 24
         },
         {
-            "name": "Handlebars.js",
+            "name": "Mustache",
             "size": 10275,
             "fontSize": 24
         },
@@ -99,7 +99,7 @@
             "fontSize": 24
         },
         {
-            "name": "Django",
+            "name": "AngularJS",
             "size": 4930
         }
     ]
